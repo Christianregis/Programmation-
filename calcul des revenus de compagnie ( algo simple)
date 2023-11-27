@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{int s;
+int i;
+int tab[i];
+ float x;
+       s=0;
+    for(i = 0;i <= 4 ; i++) {
+        printf("entrez les valeurs respectives des montants de chaque divisions\n");
+        scanf (tab[i]);
+
+
+
+    }
+    printf ("la somme totale des revenus est : %d",s);
+    for(i=0; i<4; i++);{
+        x=((tab[i]/s)*100);
+        printf("le poucentage respectif de la division est %f",x);
+
+    }
+    return 0;
+}
