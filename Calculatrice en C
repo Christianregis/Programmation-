@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{float num1,num2,resultat;
+char op;
+ printf ("entrez un operateur de votre choix(+,-,*,/):");
+    scanf("%c",&op);
+    printf("entrez les valeurs de a et b\n");
+    scanf("%f %f",&num1,&num2);
+    switch(op){
+        case '+':
+        resultat=num1+num2;
+        break
+
+        case'-':
+            resultat = num1-num2;
+            break;
+        case'*':
+            resultat= num1*num2;
+            break;
+        case'/':
+            resultat=num1/num2;
+            break;
+            default:
+                printf("operation invalide.\n");
+    }
+            printf("le resultat de l operation est:%f\n",resultat);
+
+
+return 0;
+
+}
+
+
+
