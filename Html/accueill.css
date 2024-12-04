@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-attachment: fixed;
+    background-size: cover;
+}
+header{
+    margin: 0;
+    padding: 0;
+    background-color: blue;
+}
+ul{
+    display: flex;
+}
+.bienvenue{
+    display: flex;
+    text-align: left;
+    padding: 8px;
+    margin-left: 8px;
+    color: white;
+}
+.contenaire_principal{
+    display: flex;
+    padding-left:500px;
+}
+.wrapper{
+    display: flex;
+    padding: 8px;
+    justify-items: right;
+    justify-content: right;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+li{
+    list-style: none;
+}
+.header1{
+    background-color: white;
+    margin: 20px;
+}
+
+.wrapper1{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-right: 5px;
+}
+.image_canada{
+    padding-right:5px;
+}
+.contenaire_prinp{
+    display: flex;
+    padding-left: 100px;
+}
+.redirect1{
+    color: blue;
+    text-decoration: none;
+}
+
