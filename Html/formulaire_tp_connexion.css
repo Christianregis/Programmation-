@@ -97,7 +97,15 @@ label{
     padding-left: 110px;
     padding-right: 110px;
     border-radius: 20px;
+    transition: 0.3s ease;
 }
+.submit:hover{
+    padding-right: 130px;
+    padding-left: 130px;
+    text-align: center;
+}
+
+
 .redirection{
     text-decoration: none;
     color: white;
