@@ -112,6 +112,7 @@ li{
     padding: 40px;
     padding-left: 100px;
 }
+
 .section_bronze{
     margin-right: 30px;
     margin-top: 12px;
@@ -123,8 +124,8 @@ li{
 
 }
 .section_bronze:hover{
-    margin-top: 2px;
-    margin-bottom: 0px;
+    margin-top: 3px;
+    margin-bottom: -1px;
 }
 
 .area_bronze_strong{
