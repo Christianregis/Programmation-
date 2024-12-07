@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-attachment: fixed;
+    background-size: cover;
+}
+.header0{
+    margin: 0;
+    padding: 0;
+    background-color: blue;
+}
+ul{
+    display: flex;
+}
+.bienvenue{
+    display: flex;
+    text-align: left;
+    padding: 8px;
+    margin-left: 8px;
+    color: white;
+}
+.contenaire_principal{
+    display: flex;
+    padding-left:500px;
+}
+.wrapper{
+    display: flex;
+    padding: 8px;
+    justify-items: right;
+    justify-content: right;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+li{
+    list-style: none;
+}
+.header1{
+    background-color: white;
+    margin: 20px;
+}
+
+.wrapper1{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-right: 5px;
+}
+.image_canada{
+    padding-right:5px;
+}
+.contenaire_prinp{
+    display: flex;
+    padding-left: 30px;
+}
+.redirect1{
+    color: black;
+    text-decoration: none;
+}
+.interieur_page_accueill{
+    flex-direction: row;
+    padding: 50px;
+    padding-top: -10px;
+    border-radius: 2px;
+}
+.image_canada1{
+    background-color: blue;
+    padding: 30px;
+    text-align: left;
+    font-size: 15px;
+    color: white;
+    background-image: url("th.jfif");
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+}
+.redirect2{
+    color: white;
+    text-decoration: none;
+}
+.interieur{
+    background-color: rgb(75, 72, 72);
+    display: flex;
+}
+.bienvenue_int{
+    display: flex;
+    padding: 10px;
+    padding-left: 10px;
+}
+.ecriture1{
+    color: white;
+    font-size: 20px;
+}
+.tarifs{
+    text-align: center;
+    padding: 30px;
+    background-color: blue;
+    font-size: 25px;
+    color: white;
+}
+.tarifs_explication{
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+    color: black;
+}
+.contenaire{
+    display: flex;
+    padding: 40px;
+    padding-left: 100px;
+}
+
+.section_bronze{
+    margin-right: 30px;
+    margin-top: 12px;
+    margin-bottom: -9px;
+    border: 1px solid blue;
+    border-radius: 10px;
+    justify-content: space-between;
+    transition: 0.3s ease;
+
+}
+.section_bronze:hover{
+    margin-top: 3px;
+    margin-bottom: -1px;
+}
+
+.area_bronze_strong{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+.area_number{
+    font-size: 24px;
+    color: black;
+    padding: 9px;
+    text-align: center;
+}
+.area_bronze{
+    padding: 30px;
+    background-color: blue;
+    color: white;
+    text-align: center;
+
+}
+.section_bronze_area{
+    margin: 25px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid blue;
+    padding: 6px;
+    padding-bottom: 10px;
+    font-size: 17px;
+}
+#section_bronze_area{
+    text-align: center;
+    font-size: 19px;
+}
+
+.section_bronze_area:last-child{
+    border-bottom: none;
+}
+.button_paiement{
+    text-align: center;
+    padding: 10px;
+    margin-left: 90px;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: white;
+    background-color: blue;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    
+}
+.button_paiement:hover{
+    padding-left: 30px;
+    padding-right: 35px;
+    text-align: center;
+}
+footer{
+    flex-direction: row;
+ }
+.footer1{
+    display: flex;
+    background-color: blue;
+}
+.zone_page{
+    flex-direction: column;
+    display: flex;
+    padding: 10px;
+    padding-top: 20px;
+    padding-left: 70px;
+}
+.zone_accueil{
+    flex-direction: column;
+    padding: 10px;
+    padding-left: 10px;
+    border-bottom: 1px solid white;
+}
+.zone_po{
+    flex-direction: column;
+    padding: 10px;
+    padding-left: 10px;
+    border-bottom: 1px solid white;
+}
+.zone_interne{
+    display: flex;
+}
+.ecriture2{
+    font-size: 17px;
+    color: white;
+}
+.zone_page_po{
+    flex-direction: column;
+}
+.zone_interne_page{
+    flex-direction: column;
+}
+.icons_zone{
+    display: flex;
+    justify-content: space-between;
+}
+p{
+    color: white;
+}
+.zone_accepter{
+    padding: 8px;
+}
+.image_paiement{
+    flex-direction: column;
+    display: flex;
+
+}
+.paiement{
+    padding-bottom: 10px;
+}
+.boutton_paiement{
+    padding: 5px;    
+    text-align: center;
+    transition: 0.3s ease;
+}
+.accept{
+    color: white;
+}
+.copyright{
+    display: flex;
+}
+.copyright_footer{
+    padding-right: 900px;
+}
