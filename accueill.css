@@ -197,5 +197,10 @@ p{
     display: flex;
 }
 .copyright_footer{
-    padding-right: 900px;
+    padding-right: 1000px;
+}
+
+#fa1{
+    display: flex;
+    padding-right: 3px;
 }
