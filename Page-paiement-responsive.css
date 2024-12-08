@@ -250,3 +250,52 @@ p{
 .copyright_footer{
     padding-right: 900px;
 }
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .contenaire_principal, .contenaire_prinp, .contenaire {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .wrapper, .wrapper1, .section_bronze, .image_paiement {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .section_bronze_area {
+        font-size: 15px;
+    }
+    .button_paiement, .boutton_paiement {
+        width: 90%;
+        margin: 10px auto;
+        padding: 10px;
+        font-size: 16px;
+    }
+    .footer1 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .copyright_footer {
+        text-align: center;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .tarifs {
+        font-size: 20px;
+    }
+    .tarifs_explication {
+        font-size: 16px;
+    }
+    .area_bronze_strong {
+        font-size: 20px;
+    }
+    .area_number {
+        font-size: 18px;
+    }
+    .section_bronze_area {
+        font-size: 13px;
+    }
+}
