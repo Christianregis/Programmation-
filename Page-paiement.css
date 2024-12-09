@@ -136,38 +136,92 @@ padding-bottom: 4px;
     font-size: 20px;
 }
 
-/*Element hors des header */
 
-.welcome{
-    padding: 20px;
+.tarifs{
     text-align: center;
-}
-strong{
-    color: black;
+    padding: 30px;
+    background-color: blue;
     font-size: 25px;
+    color: white;
+}
+.tarifs_explication{
+    text-align: center;
+    padding: 30px;
+    font-size: 20px;
+    color: black;
+}
+.contenaire{
+    display: flex;
+    padding: 40px;
+    padding-left: 100px;
+}
+
+.section_bronze{
+    margin-right: 30px;
+    margin-top: 12px;
+    margin-bottom: -9px;
+    border: 1px solid blue;
+    border-radius: 10px;
+    justify-content: space-between;
+    transition: 0.3s ease;
+    box-shadow: 5px 5px rgba(0,0,0.3,0.3);
+
+}
+.section_bronze:hover{
+    margin-top: 3px;
+    margin-bottom: -1px;
+}
+
+.area_bronze_strong{
+    font-size: 25px;
+    color: white;
     text-align: center;
 }
-.entrainer{
-    padding: 20px;
-    padding-bottom: 60px;
-    justify-items: center;
+.area_number{
+    font-size: 24px;
+    color: black;
+    padding: 9px;
     text-align: center;
 }
-.button1{
-    padding: 10px;
-    font-size: 18px;
-    text-align: center;
-    padding-left: 170px;
-    padding-right: 170px;
-    border-radius: 19px;
+.area_bronze{
+    padding: 30px;
     background-color: blue;
     color: white;
-    cursor: pointer;
-    transition:0.3s ease;
+    text-align: center;
+
 }
-.button1:hover{
-    padding-left: 200px;
-    padding-right: 200px;
+.section_bronze_area{
+    margin: 25px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid blue;
+    padding: 6px;
+    padding-bottom: 10px;
+    font-size: 17px;
+}
+#section_bronze_area{
+    text-align: center;
+    font-size: 19px;
+}
+
+.section_bronze_area:last-child{
+    border-bottom: none;
+}
+.button_paiement{
+    text-align: center;
+    padding: 10px;
+    margin-left: 90px;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: white;
+    background-color: blue;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    
+}
+.button_paiement:hover{
+    padding-left: 30px;
+    padding-right: 35px;
+    text-align: center;
 }
 footer{
     flex-direction: row;
@@ -238,11 +292,5 @@ p{
     display: flex;
 }
 .copyright_footer{
-    padding-right: 500px;
-}
-.icone_footer{
-    padding-left: 400px;
-}
-#fa1{
-    padding-right: 3px;
+    padding-right: 900px;
 }
