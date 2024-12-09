@@ -169,7 +169,7 @@ strong{
     padding-left: 200px;
     padding-right: 200px;
 }
-footer{
+ooter{
     flex-direction: row;
  }
 .footer1{
@@ -238,11 +238,5 @@ p{
     display: flex;
 }
 .copyright_footer{
-    padding-right: 500px;
-}
-.icone_footer{
-    padding-left: 400px;
-}
-#fa1{
-    padding-right: 3px;
+    padding-right: 900px;
 }
