@@ -6,6 +6,11 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
+header{
+    position:sticky;
+    top: 0;
+    background-color: white;
+}
 .header0{
     margin: 0;
     padding: 0;
@@ -198,6 +203,9 @@ footer{
     padding: 10px;
     padding-left: 10px;
     border-bottom: 1px solid white;
+}
+.zone_accueil:last-child{
+    border-bottom: none;
 }
 .zone_po{
     flex-direction: column;
