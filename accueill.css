@@ -169,7 +169,7 @@ strong{
     padding-left: 200px;
     padding-right: 200px;
 }
-ooter{
+footer{
     flex-direction: row;
  }
 .footer1{
@@ -188,6 +188,9 @@ ooter{
     padding: 10px;
     padding-left: 10px;
     border-bottom: 1px solid white;
+}
+.zone_accueil:last-child{
+    border-bottom: blue;
 }
 .zone_po{
     flex-direction: column;
@@ -226,10 +229,19 @@ p{
 .paiement{
     padding-bottom: 10px;
 }
+table{
+    border-radius: 6px;
+    background-color: white;
+}
+td{
+    padding:4px
+}
 .boutton_paiement{
-    padding: 5px;    
+    padding: 6px;
+    padding-right: 6px; 
+    padding-left: 6px;   
     text-align: center;
-    transition: 0.3s ease;
+    border-radius: 10px;
 }
 .accept{
     color: white;

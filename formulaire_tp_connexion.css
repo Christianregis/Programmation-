@@ -7,7 +7,6 @@ body{
     justify-items: center;
     background-attachment: fixed;
     background-size: cover;
-    background-image: url("image_tcf.jfif");
 }
 form{
     border: 2px;
@@ -18,30 +17,34 @@ form{
     flex-direction: column;
     gap: 20px;
 
+
+
 }
 .contenaire_principal{
     display: flex;
+    background-color: rgb(214, 214, 243);
+    box-shadow: 5px 5px rgba(0,0,0.3,0.3);
 }
 input{
     display: flex;
     margin-bottom: 20px;
-    padding: 5px;
-    border-radius: 4px;
-    padding-right: 70px;
+    padding: 8px;
+    padding-right: 100px;
+    border:2px solid gray;
+    border-radius:2px;
 }
-input:placeholder-shown{
-    font-family:Georgia, 'Times New Roman', Times, serif;
-}
+
 .connection_inscription{
-    margin-top: 5px;
+    margin-top: 9px;
     margin-bottom: 20px;
     display: flex;
 }
 .connect{
-    padding: 3px;
+    padding: 5px;
     background-color: blue;
     text-decoration: none;
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding:6px;
     padding-left: 20px;
     padding-right: 20px;
@@ -50,13 +53,14 @@ input:placeholder-shown{
 }
 
 .inscrire{
-    padding: 3px;
+    padding: 5px;
     background-color: gray;
     text-decoration: none;
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 6px;
     padding-left: 20px;
-    padding-right: 26px;
+    padding-right: 20px;
     color: black;
     border-radius: 1px;
 }
@@ -66,7 +70,8 @@ input:placeholder-shown{
 }
 
 .contenaire_remplissage{
-    margin-left: 10px;
+    padding-left: 20px;
+
 }
 input:last-child{
     margin-bottom: 0;
@@ -113,6 +118,7 @@ label{
 
 .forgot{
     text-decoration: none;
+    padding-left: 5px;
 }
 .contain{
     display: flex;
