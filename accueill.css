@@ -36,6 +36,7 @@ ul{
     padding-right: 10px;
     justify-items: right;
     justify-content: right;
+    border-left: 1px solid white;
 }
 .wrapper1:hover .hidden-links{
     display: block;
