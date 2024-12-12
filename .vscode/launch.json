@@ -7,8 +7,8 @@
         {
             "type": "msedge",
             "request": "launch",
-            "name": "Open Accueil.html",
-            "file": "c:\\Users\\Christian Cheukap\\Desktop\\Project-tailwind\\Accueil.html"
+            "name": "Open Paiement.html",
+            "file": "c:\\Users\\Christian Cheukap\\Desktop\\Project-tailwind\\paiement.html"
         }
     ]
 }
