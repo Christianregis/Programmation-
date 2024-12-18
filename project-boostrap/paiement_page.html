@@ -1,0 +1,297 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de paiement</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <style>
+        .hover-text{
+            color:rgb(39, 37, 37);
+        }
+        .hover-text:hover{
+            color: blue;
+        }
+        .hover-div{
+            padding-left: 50px;
+            padding-right: 50px;
+            transition: 0.4s ease;
+        }
+        .hover-div:hover{
+            padding-left: 80px;
+            padding-right: 80px; 
+        }
+        .effect_bronze{
+            margin-left: 100px;
+        }
+        .contenaire{
+            padding-top: 50px;
+        }
+        .hover_contenaire{
+            transition: 0.4s ease;
+        }
+        .hover_contenaire{
+            margin-bottom: 50px;
+        }
+        .hover_contenaire:hover{
+            margin-top: -30px;
+            margin-bottom:70px; 
+        }
+        .menu-icon{
+            cursor: pointer;
+            font-size: 24px;
+            display: none;
+        }
+        .menu_bar{
+            display: block;
+        }
+        @media(max-width :600px){
+            .bar_menu{
+                display: none;
+                border-color: none;
+            }
+            .menu-icon{
+                display: block;
+            }
+            .menu_bar{
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<div class="d-flex bg-primary">
+    <div class="text-light fs-5 px-5 h-full me-5 pe-5 bar_menu">
+        Bienvenue sur la plat-forme TCF canada
+    </div>
+    <div class="d-flex px-3 ps-5 border-end border-white bar_menu">
+        <i class="fa fa-credit-card text-light py-2 px-1 bar_menu"></i>
+        <a href="paiement_page.html" class="text-decoration-none text-light fs-5 bar_menu">Tarifs</a>
+    </div>
+    <div class="d-flex px-3 border-end border-white bar_menu">
+        <i class="fas fa-graduation-cap text-light py-2 px-1 bar_menu"></i>
+        <a href="#" class="text-decoration-none text-light fs-5 bar_menu">Formation</a>
+    </div>
+    <div class="d-flex px-3 border-end border-white bar_menu">
+        <i class="fas fa-headset text-light py-2 px-1 bar_menu"></i>
+        <a href="#" class="text-decoration-none text-light fs-5 bar_menu">Service client</a>
+    </div>
+    <div class="ps-5 align-items-center justify-content-center d-flex">
+        <a href="#"><i class="fa-brands fa-facebook text-light py-2 px-1"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube text-light py-2 px-1"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram text-light py-2 px-1"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp text-light py-2 px-1"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter text-light py-2 px-1"></i></a>
+    </div>
+</div>
+
+<!-- Suite du header-->
+<div class="d-flex flex-col pb-5 menu_bar">
+    <div class="menu-icon">
+        <li class="fas fa-bars py-3 px-4"></li>
+    </div>
+    <div class="px-5 py-2 menu_bar">
+        <img src="#" alt="image_canada" width="70" height="70" class="rounded">
+    </div>
+    <div class="px-5 py-4 d-flex">
+        <i class="fa fa-pencil-alt text-dark py-1 px-1 menu_bar"></i>
+        <a href="#" class="fw-bold text-decoration-none menu_bar">Expression Ecrite</a>
+    </div>
+    <div class="px-5 py-4 d-flex">
+        <i class="fas fa-microphone text-dark py-1 px-1 menu_bar"></i>
+        <a href="#" class="fw-bold text-decoration-none menu_bar">Expression Orale</a>
+    </div>
+    <div class="px-5 py-4 d-flex">
+        <i class="fas fa-book text-dark py-1 px-1 menu_bar"></i>
+        <a href="#" class="fw-bold text-decoration-none menu_bar">Comprehension Ecrite</a>
+    </div>
+    <div class="px-5 py-4 d-flex">
+        <i class="fas fa-bullhorn text-dark py-1 px-1 menu_bar"></i>
+        <a href="#" class="fw-bold text-decoration-none menu_bar">Comprehension Orale</a>
+    </div>
+</div>
+<body>
+    <div class="text-center py-3 fw-bold fs-3 text-light bg-primary">Tarifs</div>
+    <div  class="d-flex contenaire flex-wrap">
+        <div class="flex-row border border-primary rounded shadow effect_bronze me-5 ms-5 hover_contenaire">
+            <div class="bg-primary fs-4 fw-bold text-light px-3 py-4 text-center">
+                BRONZE
+            </div>
+            <div class="flex-row">
+                <div class="text-center text-dark fs-5 fw-bold py-3 ">
+                    14<sup>.99$</sup>
+                </div>
+                <div class="border-bottom border-primary py-3 px-2 text-center">
+                    Comprehension Ecrite : 38 Tests <br>d'entrainements (+1000 Textes)
+                </div>
+                <div class="border-bottom border-primary py-3 px-2 text-center">
+                    Comprehension Orale : 36 Tests <br>d'entrainements (+1000 Extraits Sonores)
+                </div>
+                <div class="border-bottom border-primary py-3 px-2 text-center">
+                    Expression Ecrite : Corrections de Taches 2<br>des actualites
+                </div>
+                <div class="border-bottom border-primary py-2 my-3 px-2 text-center">
+                    Expression Orale : Corrections de Taches 3<br>des actualites
+                </div>
+                <div class="text-back text-center fw-bold fs-5 py-3">
+                    Acces 5 Jours
+                </div>
+                <div class="d-flex align-items-center justify-content-center py-3">
+                    <button type="button" class="text-center bg-primary  rounded-4 text-light fw-bold hover-div" onclick="alert('Vous avez cliquez !')">S'ABONNER</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-row border border-primary rounded shadow me-5 ms-5 hover_contenaire">
+            <div class="bg-primary fs-4 fw-bold text-light px-3 py-4 text-center">
+                SILVER
+            </div>
+            <div class="flex-row">
+                <div class="text-center text-dark fs-5 fw-bold py-3 ">
+                    29<sup>.99$</sup>
+                </div>
+                <div class="border-bottom border-primary py-3 px-2 text-center">
+                    Comprehension Ecrite : 38 Tests <br>d'entrainements (+1000 Textes)
+                </div>
+                <div class="border-bottom border-primary py-3 px-2 text-center">
+                    Comprehension Orale : 36 Tests <br>d'entrainements (+1000 Extraits Sonores)
+                </div>
+                <div class="border-bottom border-primary py-3 px-2 text-center">
+                    Expression Ecrite : Corrections de Taches 2<br>des actualites
+                </div>
+                <div class="border-bottom border-primary py-2 my-3 px-2 text-center">
+                    Expression Orale : Corrections de Taches 3<br>des actualites
+                </div>
+                <div class="text-back text-center fw-bold fs-5 py-3">
+                    Acces 2 Semaines
+                </div>
+                <div class="d-flex align-items-center justify-content-center py-3">
+                    <button type="button" class="text-center bg-primary  rounded-4 text-light fw-bold hover-div" onclick="alert('Vous avez cliquez !')">S'ABONNER</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-row border border-primary rounded shadow hover_contenaire me-5 ms-5">
+            <div class="bg-primary fs-4 fw-bold text-light px-3 py-4 text-center">
+                SILVER
+            </div>
+            <div class="flex-row">
+                <div class="text-center text-dark fs-5 fw-bold py-3 ">
+                    29<sup>.99$</sup>
+                </div>
+                <div class="border-bottom border-primary py-3 px-2 text-center">
+                    Comprehension Ecrite : 38 Tests <br>d'entrainements (+1000 Textes)
+                </div>
+                <div class="border-bottom border-primary py-3 px-2 text-center">
+                    Comprehension Orale : 36 Tests <br>d'entrainements (+1000 Extraits Sonores)
+                </div>
+                <div class="border-bottom border-primary py-3 px-2 text-center">
+                    Expression Ecrite : Corrections de Taches 2<br>des actualites
+                </div>
+                <div class="border-bottom border-primary py-2 my-3 px-2 text-center">
+                    Expression Orale : Corrections de Taches 3<br>des actualites
+                </div>
+                <div class="text-back text-center fw-bold fs-5 py-3">
+                    Acces 1 Mois
+                </div>
+                <div class="d-flex align-items-center justify-content-center py-3">
+                    <button type="button" class="text-center bg-primary  rounded-4 text-light fw-bold hover-div" onclick="alert('Vous avez cliquez !')">S'ABONNER</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="d-flex bg-primary flex-wrap">
+        <div class="flex-row px-5 pt-2 ">
+            <div class="fw-bold text-light fs-4">
+                Nos pages
+            </div>
+            <div class="d-flex py-2 border-bottom border-white">
+                <i class="fas fa-home text-light px-1 py-1"></i>
+                <a href="#" class="text-decoration-none text-light">Page d'accueil</a>
+            </div>
+            <div class="d-flex py-2 border-bottom border-white">
+                <i class="fas fa-book text-light px-1 py-1"></i>
+                <a href="#" class="text-decoration-none text-light">Comprehension Ecrite</a>
+            </div>
+            <div class="d-flex py-2 border-bottom border-white">
+                <i class="fas fa-bullhorn text-light px-1 py-1"></i>
+                <a href="#" class="text-decoration-none text-light">Comprehension Orale</a>
+            </div>
+            <div class="d-flex py-2 border-bottom border-white">
+                <i class="fa fa-pencil-alt text-light px-1 py-1"></i>
+                <a href="#" class="text-decoration-none text-light">Expression Ecrite</a>
+            </div>
+            <div class="d-flex py-2 border-bottom border-white">
+                <i class="fas fa-microphone text-light px-1 py-1"></i>
+                <a href="#" class="text-decoration-none text-light">Expression Orale</a>
+            </div>
+            <div class="d-flex py-2">
+                <i class="fas fa-balance-scale text-light px-1 py-1"></i>
+                <a href="#" class="text-decoration-none text-light">Politique de retour de remboursement</a>
+            </div>
+        </div>
+    
+        <div class="flex-row pt-2 px-5">
+            <div class="d-flex py-2 border-bottom border-white">
+                <i class="fas fa-shield-alt text-light px-1 py-1"></i>
+                <a href="#" class="text-decoration-none text-light">Politique de confidentialite</a>
+            </div>
+            <div class="d-flex py-2">
+                <i class="fas fa-newspaper text-light px-1 py-1"></i>
+                <a href="#" class="text-decoration-none text-light">Blog</a>
+            </div>
+            <div class="flex-row shadow">
+                <div class="text-white fw-bold fs-5">MON COMPTE</div>
+                <div class="d-flex pb-2">
+                    <i class="fas fa-question-circle text-white px-2 py-1"></i>
+                    <a href="#" class="text-white text-decoration-none">Introduire des informations</a>
+                </div>
+                <div class="d-flex pb-2">
+                    <i class="fas fa-sign-out-alt text-white px-2 py-1"></i>
+                    <a href="#" class="text-white text-decoration-none">Se deconnecter</a>
+                </div>
+            </div>
+        </div>
+        <div class="flex-row pt-2 px-5">
+            <div class="text-white fw-bold fs-5">
+                Nos Reseau Sociaux
+            </div>
+            <div class="d-flex">
+                <a href="#"><i class="fa-brands fa-facebook text-light py-2 px-1"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube text-light py-2 px-1"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram text-light py-2 px-1"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp text-light py-2 px-1"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter text-light py-2 px-1"></i></a>
+            </div>
+            <div class="text-white fw-bold fs-5">
+                A propos de nous
+            </div>
+            <div class="text-white">
+                Platforme specialisee dans
+            </div>
+            <div class="text-white">
+                la preparation du Tcf canada avec
+            </div>
+            <div class="text-white">
+                des tests a conditions reelles
+            </div>
+        </div>
+        <div class="flex-row pt-3 ps-5 py-4">
+            <div class="text-white fw-bold fs-5 ">Nous Acceptons</div>
+            <table class="bg-light rounded">
+                <tr>
+                    <td><a href="#"><img src="img_mtn.jfif" alt="Mtn" width="80" height="80"></a></td>
+                    <td><a href="#"><img src="th1.jfif" alt="Orange" width="80" height="80"></a></td>
+                </tr>
+                <tr>
+                    <td><a href="#"><img src="download (1).jfif" alt="Western" width="80" height="80"></a></td>
+                    <td><a href="#"><img src="th2.jfif" alt="Moov" width="80" height="80"></a></td>
+                </tr>
+            </table>
+            <button type="button" class="text-primary bg-light rounded text-center px-5 py-2">Cliquer ici</button>
+        </div>
+    </footer>
+    <div class="text-dark text-center fw-bold">Copyright regis@2007 all right reserved</div>
+</body>
+</html>
