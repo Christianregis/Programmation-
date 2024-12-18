@@ -1,0 +1,232 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'accueil de TCF Canada</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <style>
+        .hover-text{
+            color:rgb(39, 37, 37);
+        }
+        .hover-text:hover{
+            color: blue;
+        }
+        .gradiant{
+            background:linear-gradient(to right ,blue,rgb(39, 39, 151));
+        }
+        .btn-entrainer{
+            padding-left:100px;
+            padding-right:100px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            background-color: rgb(24, 24, 211);
+            border-radius: 10px;
+            color: azure;
+            transition: 0.4s ease;
+            font-size: 20px;
+        }
+        .btn-entrainer:hover{
+            padding-left:150px;
+            padding-right:150px; 
+            background-color: blue;
+            color: white;
+        }
+        .menu-icon{
+            cursor: pointer;
+            font-size: 24px;
+            display: none;
+        }
+        .menu_bar{
+            display: block;
+        }
+        @media(max-width :760px){
+            .bar_menu{
+                display: none;
+                border-color: none;
+            }
+            .menu-icon{
+                display: block;
+            }
+            .menu_bar{
+                display: none;
+            }
+        }
+    
+    </style>
+</head>
+<div class="d-flex bg-primary">
+    <div class="text-light fs-5 px-5 h-full me-5 pe-5 bar_menu">
+        Bienvenue sur la plat-forme TCF canada
+    </div>
+    <div class="d-flex px-3 ps-5 border-end border-white bar_menu">
+        <i class="fa fa-credit-card text-light py-2 px-1 bar_menu"></i>
+        <a href="paiement_page.html" class="text-decoration-none text-light fs-5 bar_menu">Tarifs</a>
+    </div>
+    <div class="d-flex px-3 border-end border-white bar_menu">
+        <i class="fas fa-graduation-cap text-light py-2 px-1 bar_menu"></i>
+        <a href="#" class="text-decoration-none text-light fs-5 bar_menu">Formation</a>
+    </div>
+    <div class="d-flex px-3 border-end border-white bar_menu">
+        <i class="fas fa-headset text-light py-2 px-1 bar_menu"></i>
+        <a href="#" class="text-decoration-none text-light fs-5 bar_menu">Service client</a>
+    </div>
+    <div class="ps-5 align-items-center justify-content-center d-flex">
+        <a href="#"><i class="fa-brands fa-facebook text-light py-2 px-1"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube text-light py-2 px-1"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram text-light py-2 px-1"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp text-light py-2 px-1"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter text-light py-2 px-1"></i></a>
+    </div>
+</div>
+
+<!-- Suite du header-->
+<div class="d-flex flex-col pb-5 menu_bar">
+    <div class="menu-icon">
+        <li class="fas fa-bars py-3 px-4"></li>
+    </div>
+    <div class="px-5 py-2 menu_bar">
+        <img src="#" alt="image_canada" width="70" height="70" class="rounded">
+    </div>
+    <div class="px-5 py-4 d-flex">
+        <i class="fa fa-pencil-alt text-dark py-1 px-1 menu_bar"></i>
+        <a href="#" class="fw-bold text-decoration-none menu_bar">Expression Ecrite</a>
+    </div>
+    <div class="px-5 py-4 d-flex">
+        <i class="fas fa-microphone text-dark py-1 px-1 menu_bar"></i>
+        <a href="#" class="fw-bold text-decoration-none menu_bar">Expression Orale</a>
+    </div>
+    <div class="px-5 py-4 d-flex">
+        <i class="fas fa-book text-dark py-1 px-1 menu_bar"></i>
+        <a href="#" class="fw-bold text-decoration-none menu_bar">Comprehension Ecrite</a>
+    </div>
+    <div class="px-5 py-4 d-flex">
+        <i class="fas fa-bullhorn text-dark py-1 px-1 menu_bar"></i>
+        <a href="#" class="fw-bold text-decoration-none menu_bar">Comprehension Orale</a>
+    </div>
+</div>
+<body>
+    <div class="flex-row m-3 pt-5 pb-4">
+        <div class="flex-row gradiant text-white px-4 py-4 shadow">
+            <p class="text-white fw-bold fs-5">Bonjour<br>671066139 Christian Cheukap.<br></p>Membre depuis 3,2024
+        </div>
+        <div class="bg-dark d-flex shadow">
+            <div class="d-flex py-1 px-3">
+                <i class="fas fa-home text-light px-1 py-1"></i>
+                <a href="index.html" class="text-light text-decoration-none">Welcome</a>
+            </div>
+            <div class="d-flex py-1 px-2">
+                <i class="fas fa-info-circle text-light px-1 py-1"></i>
+                <a href="#" class="text-light text-decoration-none">Profile Details</a>
+            </div>
+            <div class="d-flex py-1 px-2">
+                <i class="fas fa-subscript text-light px-1 py-1"></i>
+                <a href="paiement_page.html" class="text-light text-decoration-none">Subcription</a>
+            </div>
+            <div class="d-flex py-1 px-2">
+                <i class="fas fa-cart-plus text-light px-1 py-1"></i>
+                <a href="#" class="text-light text-decoration-none">Orders</a>
+            </div>
+            <div class="d-flex py-1 px-2 ">
+                <i class="fas fa-sign-out-alt text-light px-1  py-1"></i>
+                <a href="connection_bootstrap.html" class="text-light text-decoration-none">LogOut</a>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex align-items-center justify-content-center pb-5">
+        <button type="button" class="btn-entrainer" onclick="window.location.href='connection_bootstrap.html'">S'entrainer <i class="fas fa-chevron-right px-1 py-2"></i></button>
+    </div>
+<footer class="d-flex bg-primary flex-wrap">
+    <div class="flex-row px-5 pt-2 ">
+        <div class="fw-bold text-light fs-4">
+            Nos pages
+        </div>
+        <div class="d-flex py-2 border-bottom border-white">
+            <i class="fas fa-home text-light px-1 py-1"></i>
+            <a href="#" class="text-decoration-none text-light">Page d'accueil</a>
+        </div>
+        <div class="d-flex py-2 border-bottom border-white">
+            <i class="fas fa-book text-light px-1 py-1"></i>
+            <a href="#" class="text-decoration-none text-light">Comprehension Ecrite</a>
+        </div>
+        <div class="d-flex py-2 border-bottom border-white">
+            <i class="fas fa-bullhorn text-light px-1 py-1"></i>
+            <a href="#" class="text-decoration-none text-light">Comprehension Orale</a>
+        </div>
+        <div class="d-flex py-2 border-bottom border-white">
+            <i class="fa fa-pencil-alt text-light px-1 py-1"></i>
+            <a href="#" class="text-decoration-none text-light">Expression Ecrite</a>
+        </div>
+        <div class="d-flex py-2 border-bottom border-white">
+            <i class="fas fa-microphone text-light px-1 py-1"></i>
+            <a href="#" class="text-decoration-none text-light">Expression Orale</a>
+        </div>
+        <div class="d-flex py-2">
+            <i class="fas fa-balance-scale text-light px-1 py-1"></i>
+            <a href="#" class="text-decoration-none text-light">Politique de retour de remboursement</a>
+        </div>
+    </div>
+
+    <div class="flex-row pt-2 px-5">
+        <div class="d-flex py-2 border-bottom border-white">
+            <i class="fas fa-shield-alt text-light px-1 py-1"></i>
+            <a href="#" class="text-decoration-none text-light">Politique de confidentialite</a>
+        </div>
+        <div class="d-flex py-2">
+            <i class="fas fa-newspaper text-light px-1 py-1"></i>
+            <a href="#" class="text-decoration-none text-light">Blog</a>
+        </div>
+        <div class="flex-row shadow">
+            <div class="text-white fw-bold fs-5">MON COMPTE</div>
+            <div class="d-flex pb-2">
+                <i class="fas fa-question-circle text-white px-2 py-1"></i>
+                <a href="#" class="text-white text-decoration-none">Introduire des informations</a>
+            </div>
+            <div class="d-flex pb-2">
+                <i class="fas fa-sign-out-alt text-white px-2 py-1"></i>
+                <a href="#" class="text-white text-decoration-none">Se deconnecter</a>
+            </div>
+        </div>
+    </div>
+    <div class="flex-row pt-2 px-5">
+        <div class="text-white fw-bold fs-5">
+            Nos Reseau Sociaux
+        </div>
+        <div class="d-flex">
+            <i class="fa-brands fa-facebook text-light py-2 px-1"></i>
+            <i class="fa-brands fa-youtube text-light py-2 px-1"></i>
+            <i class="fa-brands fa-instagram text-light py-2 px-1"></i>
+            <i class="fa-brands fa-whatsapp text-light py-2 px-1"></i>
+            <i class="fa-brands fa-twitter text-light py-2 px-1"></i>
+        </div>
+        <div class="text-white fw-bold fs-5">
+            A propos de nous
+        </div>
+        <div class="text-white">
+            Platforme specialisee dans
+        </div>
+        <div class="text-white">
+            la preparation du Tcf canada avec
+        </div>
+        <div class="text-white">
+            des tests a conditions reelles
+        </div>
+    </div>
+    <div class="flex-row pt-3 ps-5 py-4">
+        <div class="text-white fw-bold fs-5">Nous Acceptons</div>
+        <table class="bg-light rounded">
+            <tr>
+                <td><a href="#"><img src="img_mtn.jfif" alt="Mtn" width="80" height="80"></a></td>
+                <td><a href="#"><img src="th1.jfif" alt="Orange" width="80" height="80"></a></td>
+            </tr>
+            <tr>
+                <td><a href="#"><img src="download (1).jfif" alt="Western" width="80" height="80"></a></td>
+                <td><a href="#"><img src="th2.jfif" alt="Moov" width="80" height="80"></a></td>
+            </tr>
+        </table>
+        <button type="button" class="text-primary bg-light rounded text-center px-5 py-2">Cliquer ici</button>
+    </div>
+</footer>
+<div class="text-dark text-center fw-bold">Copyright regis@2007 all right reserved</div>
+</body>
+</html>
