@@ -1,0 +1,110 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <title>Calculatrice</title>
+    <style>
+        .resultat{
+            padding-left: 300px;
+            padding-right: 0px;
+            padding-top: 120px;
+            padding-bottom: 0px;
+            overflow-wrap: normal;
+            overflow: hidden;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            overflow: hidden;
+            
+        }
+        .button{
+            background-color: rgb(57, 57, 206);
+            color: white;
+        }
+        .hover_button:hover{
+            background-color: rgb(57, 57, 206);
+            color: white;
+        }
+        .hover_button1:hover{
+            background-color: brown;
+            color: rgb(129, 110, 110);
+        }
+        .hover_button2:hover{
+            background-color: green;
+            color: rgb(129, 110, 110);
+        }
+        .contenaire{
+            position: fixed;
+        }
+    </style>
+</head>
+<body class="bg-secondary flex-row align-items-center justify-content-center d-flex">
+    <div class="flex-row align-items-center justify-content-center rounded-3 shadow-lg px-2 py-2 my-4 bg-light">
+        <div class="resultat bg-dark shadow rounded-4"><label for="resultat" class="text-light text-right fs-3" id="display"></label></div>
+        <div class="flex-row">
+            <div class="d-flex py-3">
+                <button type="button" class="fw-bold fs-4 px-5 py-3 rounded-4 me-3 shadow button" onclick="clear_display()">AC</button>
+                <button type="button" class="fw-bold fs-4 px-5 py-3 rounded-4 me-3 shadow hover_button " onclick="appendToDisplay('(')">(</button>
+                <button type="button" class="fw-bold fs-4 px-5 py-3 rounded-4 me-3 shadow hover_button" onclick="appendToDisplay(')')">)</button>
+                <button type="button" class="fw-bold fs-4 px-5 py-3 rounded-4  shadow hover_button" onclick="appendToDisplay('*')">*</button>
+            </div>
+            <div class="d-flex py-3">
+                <button type="button" class="fw-bold fs-4 px-5 py-3 rounded-4 me-3 shadow hover_button" onclick="appendToDisplay('7')">7</button>
+                <button type="button" class="fw-bold fs-4 px-5 py-3 rounded-4 me-3 shadow hover_button" onclick="appendToDisplay('8')">8</button>
+                <button type="button" class="fw-bold fs-4 px-5 py-3 rounded-4 me-3 shadow hover_button" onclick="appendToDisplay('9')">9</button>
+                <button type="button" class="fw-bold fs-4 px-5 py-3 rounded-4  shadow hover_button1" onclick="appendToDisplay('/')"><i class="fas fa-divide text-center"></i></button>
+            </div>
+            <div class="d-flex py-3">
+                <button type="button" class="fw-bold fs-4 px-5 py-3 rounded-4 me-3 shadow hover_button" onclick="appendToDisplay('4')">4</button>
+                <button type="button" class="fw-bold fs-4 px-5 py-3 rounded-4 me-3 shadow hover_button" onclick="appendToDisplay('5')">5</button>
+                <button type="button" class="fw-bold fs-4 px-5 py-3 rounded-4 me-3 shadow hover_button" onclick="appendToDisplay('6')">6</button>
+                <button type="button" class="fw-bold fs-4 px-5 py-3 rounded-4  shadow hover_button1" onclick="appendToDisplay('-')"><i class="fas fa-minus text-center"></i></button>
+            </div>
+            <div class="d-flex py-3">
+                <button type="button" class="fw-bold fs-4 px-5 py-3 rounded-4 me-3 shadow" onclick="appendToDisplay('1')">1</button>
+                <button type="button" class="fw-bold fs-4 px-5 py-3 rounded-4 me-3 hover_button" onclick="appendToDisplay('2')">2</button>
+                <button type="button" class="fw-bold fs-4 px-5 py-3 rounded-4 me-3 hover_button" onclick="appendToDisplay('3')">3</button>
+                <button type="button" class="fw-bold fs-4 px-5 py-3 rounded-4  hover_button1" onclick="appendToDisplay('+')"><i class="fas fa-plus text-center"></i></button>
+            </div>
+            <div class="d-flex py-3">
+                <button type="button" class="fw-bold fs-4 px-5 py-3 rounded-4 me-3 shadow hover_button" onclick="appendToDisplay('0')">0</button>
+                <button type="button" class="fw-bold fs-4 px-5 py-3 rounded-4 me-3 shadow hover_button" onclick="appendToDisplay(',')">.</button>
+                <button type="button" class="fw-bold fs-4 px-5 py-3 rounded-4 me-3 shadow hover_button" id="supprimer" onclick="delete_values()"><i class="text-black text-center fa-solid fa-xmark"></i></button>
+                <button type="button" class="fw-bold fs-4 px-5 py-3 rounded-4 shadow hover_button2" onclick="calculate_result()"><i class="fas fa-equals text-center"></i></button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const display=document.getElementById('display');
+        function appendToDisplay(value) {
+            if(display.innerText===""){
+                display.innerText=value;
+            }
+            else{
+                display.innerText+=value;
+            }
+        }
+        function clear_display(){
+            display.innerText="";
+        }
+        function calculate_result(){
+            try{
+                display.innerText=eval(display.innerText);
+            }
+            catch{
+                display.innerText="Math Error !";
+            }
+        }
+        function delete_values(){
+            const supprimer=display.innerText;
+            if (supprimer.length===1){
+                display.innerText="0";
+            }
+            else{
+                display.innerText=supprimer.slice(0,-1);
+            }
+        }
+    </script>
+</body>
+</html>
