@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="index.js"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <form class="bg-white shadow-lg rounded-lg p-6 space-y-6 w-full max-w-lg flex pl-5">
+        <div class="text-center mb-4">
+            <img src="OIP.jfif" alt="image_tcf_canada" class="rounded-lg mx-auto w-52 h-52">        
+        </div>
+        <div>
+            <div class="pl-4">
+                <div class="flex justify-between mb-6">
+                    <a href="connection.html" class="bg-gray-200 text-gray-800 py-2 px-4 rounded hover:bg-gray-300 pr-5px text-center">Se connecter</a>
+                    <a href="index.html" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 pr-5 text-center">S'inscrire</a>
+                </div>
+                <div>
+                    <div class="flex items-center border-b border-gray-300 py-2">
+                        <i class="fas fa-user-circle text-gray-500 mr-3"></i>
+                        <input type="text" placeholder="Nom d'utilisateur" required class="w-full py-2 px-3 outline-none focus:border-blue-500" id="nom">
+                    </div>
+                    <div class="flex items-center border-b border-gray-300 py-2 mt-4">
+                        <i class="fa fa-envelope text-gray-500 mr-3"></i>
+                        <input type="email" placeholder="Email" required class="w-full py-2 px-3 outline-none focus:border-blue-500" id="mail">
+                    </div>
+                    <div class="flex items-center border-b border-gray-300 py-2 mt-4">
+                        <i class="fa fa-user text-gray-500 mr-3"></i>
+                        <input type="text" placeholder="Nom complet" required class="w-full py-2 px-3 outline-none focus:border-blue-500" id="nom_complet">
+                    </div>
+                    <div class="flex items-center border-b border-gray-300 py-2 mt-4">
+                        <i class="fa fa-phone text-gray-500 mr-3"></i>
+                        <input type="tel" placeholder="Numéro de téléphone" required class="w-full py-2 px-3 outline-none focus:border-blue-500" id="num_tel">
+                    </div>
+                    <div class="flex items-center border-b border-gray-300 py-2 mt-4">
+                        <i class="fa fa-lock text-gray-500 mr-3"></i>
+                        <input type="password" placeholder="Mot de passe" required class="w-full py-2 px-3 outline-none focus:border-blue-500" id="password">
+                    </div>
+            </div>
+            </div>
+            <button type="submit" onclick="verifier_post()"  class="bg-blue-500 text-white py-3 px-6 rounded w-full mt-4 hover:bg-blue-600 transition">
+                S'INSCRIRE
+            </button>
+        </div>
+    </form>
+</body>
+</html>
