@@ -1,0 +1,79 @@
+.hover_li:hover{
+    background-color: gainsboro;
+    border-radius: 5px;
+}
+body{
+    background-attachment:fixed;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+.img_udo{
+    width: 60px;
+    height: 60px;
+}
+.text-brown{
+    color: brown;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #333333;
+    margin: 0;
+    padding: 0;
+}
+.bg-brown{
+    background-color: rgb(223, 217, 210);
+}
+.hover-div :hover{
+    background-color:burlywood;
+    border-radius: 5px;
+}
+.bg-brown1{
+    background-color: brown;
+}
+.text-reponsive{
+    white-space: wrap;
+}
+.hover-button{
+    background-color: white;
+    color: brown;
+    transition: 0.3s ease;
+}
+.hover-button:hover{
+    background-color:darkblue;
+    color: white;
+}
+.image_univ_douala{
+    width: 100px;
+    height: 80px;
+}
+.univ_location{
+    width: 250px;
+    height: 250px;
+}
+footer{
+    background: #333333;
+    border-top: 3px solid #800000;
+    font-family: 'Poppins',sans-serif;
+    color: #ffffff;
+
+}
+.hover_a:hover{
+    text-shadow: 0 0 5px #FFD700,0 0 10px #FFA500;
+}
+@keyframes  stretch{
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.stretch-animation{
+    display: block;
+    margin: 0 auto;
+    animation: stretch 2s infinite;
+    transition: transform 1s ease-in-out;
+}
