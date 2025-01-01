@@ -18,7 +18,7 @@
         @foreach($books as $book)
             <div class="card mb-3 shadow">
                 <div class="card-body">
-                    <h5 class="card-title">{{ $book->title }}</h5>
+                    <h5 class="card-title fw-bold">{{ $book->title }}</h5>
                     <p class="card-text">Auteur : {{ $book->author }}</p>
                     <p class="card-text">Description : {{ $book->description }}</p>
                     <a href="{{ asset('storage/' . $book->file_path) }}" class="btn btn-primary" target="_blank">Télécharger</a>

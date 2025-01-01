@@ -39,18 +39,20 @@
 
 
         <!-- Barre de recherche et tri -->
+        <form action="{{route('user.show',$user->id)}}">
         <div class="mb-4">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Rechercher un livre ou une vidéo">
+            <input type="text" class="form-control" placeholder="Rechercher un livre ou une vidéo"  name="search" value="{{request('search')}}">
             <select class="form-select" aria-label="Tri par filière">
               <option selected>Filtrer par filière</option>
               <option value="1">Genie Informatique et Decisionnel (GID) 1</option>
               <option value="2">Methode Informatique Appliquee a la Gestion d Entreprise (MIAGE)</option>
               <option value="3">Mathematique et Informatique</option>
             </select>
-            <button class="btn btn-primary">Rechercher</button>
+            <button class="btn btn-primary" type="submit">Rechercher</button>
           </div>
         </div>
+    </form>
 
         <!-- Section des Livres -->
         <h4 class="mb-3 text-primary">Cours et Supports Disponibles</h4>
@@ -60,12 +62,12 @@
                 <div class="card h-100 shadow">
                   <div class="card-body">
                     <h5 class="card-title">{{$book->title}}</h5>
-                    <p class="card-text flex-wrap">Description {{$book->author}}</p>
-                    <p class="card-text flex-wrap">Description {{$book->description}}</p>
+                    <p class="card-text flex-wrap">Auteur: {{$book->author}}</p>
+                    <p class="card-text flex-wrap">Description: {{$book->description}}</p>
                   </div>
                   <div class="card-footer d-flex justify-content-between align-items-center">
                     <button class="btn btn-outline-success" onclick="window.location.href='{{ asset('storage/' . $book->file_path) }}'">Télécharger(.pdf)</button>
-                    <button class="btn btn-outline-danger">Voir plus <li class="fas fa-plus"></li></button>
+                    <button class="btn btn-outline-danger" onclick="window.location.href='{{route('books.index')}}'">Voir plus <li class="fas fa-plus"></li></button>
                   </div>
                 </div>
               </div>
@@ -77,8 +79,8 @@
         <!-- Section des Vidéos -->
         <h4 class="mt-5 mb-3 text-primary">Vidéos Disponibles</h4>
         <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col shadow">
-            <div class="card h-100">
+          <div class="col">
+            <div class="card h-100 shadow">
               <img src="video1.jpg" class="card-img-top" alt="Titre de la Vidéo">
               <div class="card-body">
                 <h5 class="card-title">Titre de la Vidéo</h5>

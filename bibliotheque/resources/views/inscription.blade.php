@@ -21,11 +21,11 @@
 <body>
     <ul>
         @foreach ( $errors->all() as $error)
-        <li class="alert alert-danger">{{$error}}</li>
+        <li class="alert alert-danger rounded shadow">{{$error}}</li>
         @endforeach
     </ul>
     <div class="align-items-center justify-content-center min-vh-100 d-flex mb-4">
-    <form class="rounded p-4 w-100 custom-shadow" style="max-width: 400px;" action="{{route('user.store')}}" method="POST">
+    <form class="rounded p-4 w-100 custom-shadow border-bottom border-primary" style="max-width: 400px;" action="{{route('user.store')}}" method="POST">
         @csrf
         <div class="text-center mb-4">
             <img src="{{asset('assets/image/fs_udo.jfif')}}" alt="image_udo" class="rounded-4 mx-auto d-block img-fluid" style="max-width: 200px; height: auto;">

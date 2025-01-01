@@ -19,8 +19,14 @@
 </head>
 @include('layouts.app')
 <body>
+    @csrf
+    <ul>
+        @foreach ( $errors->all() as $error)
+        <li class="alert alert-danger rounded shadow">{{$error}}</li>
+        @endforeach
+    </ul>
     <div class="align-items-center justify-content-center min-vh-100 d-flex mb-4">
-    <form class="rounded p-4 w-100 custom-shadow" style="max-width: 400px;" action="{{route('connection')}}" method="GET">
+    <form class="rounded p-4 w-100 custom-shadow" style="max-width: 400px;" method="GET" action="{{route('connection1')}}">
         <div class="text-center mb-4">
             <img src="{{asset('assets/image/fs_udo.jfif')}}" alt="image_udo" class="rounded-4 mx-auto d-block img-fluid" style="max-width: 200px; height: auto;">
         </div>
@@ -30,12 +36,12 @@
                 <a href="{{route('inscription')}}" class="btn btn-secondary text-dark px-4">Creer un compte</a>
             </div>
             <div class="form-group mb-3">
-                <label for="nom" class="form-label"><i class="fas fa-user-circle me-2"></i>Nom d utilisateur</label>
-                <input type="text" id="nom" placeholder="Nom d utilisateur" class="form-control" required>
+                <label for="email" class="form-label"><i class="fas fa-user-circle me-2"></i>Email</label>
+                <input type="text" id="email" name="email" placeholder="Email de connection" class="form-control" required>
             </div>
             <div class="form-group mb-3">
                 <label for="password" class="form-label"><i class="fa fa-lock me-2"></i>Mot de passe</label>
-                <input type="password" id="password" placeholder="Mot de passe" class="form-control" required>
+                <input type="password" id="password" name="password" placeholder="Mot de passe" class="form-control" required>
             </div>
             <div class="d-flex align-items-center justify-content-center pb-2 form-group">
                 <a href="#" class="pe-4 text-decoration-none">Mot de passe oublie ?</a>

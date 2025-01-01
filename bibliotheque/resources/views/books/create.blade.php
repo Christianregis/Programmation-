@@ -11,18 +11,18 @@
     <script src="{{asset('assets/lib/inscription.js')}}"></script>
 </head>
 @include('layouts.app')
-<body class="bg-dark bg-opacity-10">
-<h1 class="text-center">Ajout de livres</h1>
 <ul>
-@if (session('error'))
+    @if (session('error'))
     <li>{{session('error')}}</li>
 @endif
 </ul>
+<body class="bg-dark bg-opacity-10">
+<h1 class="text-center">Ajout de livres</h1>
 <form action="{{ route('books.store') }}" method="POST" enctype="multipart/form-data" class="form-control container">
     @csrf
     <div class="mb-3">
         <label for="title" class="form-label">Titre</label>
-        <input type="text" id="title" name="title" class="form-control" required>
+        <input type="text" id="title" name="title" class="form-control" placeholder="exple: COURS ANALYSE 1 GID" required>
     </div>
     <div class="mb-3">
         <label for="author" class="form-label">Auteur</label>
@@ -30,7 +30,7 @@
     </div>
     <div class="mb-3">
         <label for="description" class="form-label">Description</label>
-        <input type="text" id="description" name="description" class="form-control" required>
+        <input type="text" id="description" name="description" class="form-control" placeholder="exple: Support de cours pour du premier semestre pour GID 1" required>
     </div>
     <div class="mb-3">
         <label for="file" class="form-label">Fichier PDF</label>

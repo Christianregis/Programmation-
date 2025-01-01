@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Book;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 class UserController extends Controller
 {
     public function store(Request $request)
@@ -16,8 +17,8 @@ class UserController extends Controller
             'email' => 'required|email|unique:users,email',
             'full_name' => 'required|string|max:255',
             'status' => 'required|string',
-            'phone' => 'required|string|max:9|unique:users,phone',
-            'password' => 'required|string|password|max:255',
+            'phone' => 'required|string|max:9|min:9|unique:users,phone',
+            'password' => 'required|string|min:8',
         ]);
 
 
@@ -50,23 +51,35 @@ class UserController extends Controller
 
     }
 
+    public function filter_index_title(Request $request,$id){
+        $search=$request->input('search');
+        $user=User::findOrFail($id);
+        if($search){
+            $books=Book::where('title','LIKE','%'.$search.'%')->get();
+        }
+        else{
+            $books=Book::all();
+        }
+        return view('user.show', ['books'=>$books,'user'=>$user]);
+    }
+
     public function show_connectionPage(){
         return view('connection');
     }
 
-    public function check_connection(Request $request,$id){
-        $request->validate([
-            'email'=>"required|email",
-            'password'=>'required|password',
-        ]);
-        $user = User::where('email',$request->email)->first();
-        if($user && Hash::check($request->password,$user->password)){
-            $user = User::findOrFail($id);
-            return view('user.show',compact('user'));
-        }
+    public function login(Request $request){
+        $email=$request->input('email');
+        $password=$request->input('password');
 
-        return redirect()->back()->withErrors(['email'=> 'Email ou mot de passe incorrects'])->withInput();
+        $user=DB::table('users')->where('email',$email)->first();
+        if($user && Hash::check($password,$user->password)){
+            return redirect()->route('user.show', ['id'=>$user->id]);
+        }
+        else{
+            return back()->withErrors(['message'=> 'Email ou mot de passe invalide']);
+        }
     }
+
     public function show_all($id){
         $user = User::findOrFail($id);
         return view('user.show_all',compact('user'));

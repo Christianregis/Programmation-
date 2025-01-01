@@ -31,6 +31,8 @@ Route::post('/inscription', [UserController::class, 'store'])->name('user.store'
 // Route pour afficher les informations de l'utilisateur
 Route::get('/user/{id}', [UserController::class, 'show'])->name('user.show');
 
+//Route pour le trie par titre de livre
+Route::get('/user/{id}', [UserController::class, 'filter_index_title'])->name('user.show');
 // Route pour afficher tous les informations d'un utilisateur
 Route::get('/user/information/{id}', [UserController::class, 'show_all'])->name('user.show_all');
 
@@ -49,5 +51,5 @@ Route::get('/books/download{id}', [BookController::class,'download'])->name('boo
 // Route vers la page de connection
 Route::get('/connection', [UserController::class,'show_connectionPage'])->name('connection');
 
-// Route pour verifier si l 'utilisateur est present en verifiant le mot de passe et email
-Route::post('/user/{id}', [UserController::class,'check_connection'])->name('user.show');
+
+Route::get('/og',[UserController::class,'login'])->name('connection1');
