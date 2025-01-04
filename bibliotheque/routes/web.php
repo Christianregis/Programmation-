@@ -2,6 +2,8 @@
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\VideoController;
+
 //Route vers la page d'accueil
 Route::get('/', function () {
     return view('welcome');
@@ -53,3 +55,12 @@ Route::get('/connection', [UserController::class,'show_connectionPage'])->name('
 
 
 Route::get('/og',[UserController::class,'login'])->name('connection1');
+
+// Routes pour creer , sauvergarder et afficher les videos
+Route::get('/video/create', [VideoController::class,'create'])->name('videos.create');
+Route::post('/videos',[VideoController::class,'store'])->name('videos.store');
+Route::get('/videos', [VideoController::class,'index'])-> name('videos.index');
+
+// Route pour afficher de formulaire de confirmation de suppression et supprimer un utilisateur
+Route::get('/user/delete_account/{id}',[UserController::class,'show_delete_form'])->name('user.delete_form');
+Route::get('/user/delete/{id}',[UserController::class,'delete'])->name('user.delete');

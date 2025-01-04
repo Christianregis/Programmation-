@@ -47,7 +47,6 @@
                 <a href="#" class="pe-4 text-decoration-none">Mot de passe oublie ?</a>
                 <div class="d-flex align-items-center justify-content-center"><input type="checkbox"><label for="remember" class=" px-1">Se souvenir de moi</label></div>
             </div>
-            <div id="error-container"></div>
             <button type="submit" class="btn btn-primary w-100">Se Connecter</button>
         </div>
     </form>

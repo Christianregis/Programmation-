@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ajout de livres</title>
+    <title>Ajout de videos</title>
     <link rel="stylesheet" href="{{asset('assets/lib/bootstrap/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('assets/lib/bootstrap/css/welcome.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -17,24 +17,20 @@
     @endforeach
 </ul>
 <body class="bg-dark bg-opacity-10">
-<h1 class="text-center">Ajout de livres</h1>
-<form action="{{ route('books.store') }}" method="POST" enctype="multipart/form-data" class="form-control container">
+<h1 class="text-center">Ajout de Videos</h1>
+<form action="{{route('videos.store')}}" method="POST" enctype="multipart/form-data" class="form-control container">
     @csrf
     <div class="mb-3">
         <label for="title" class="form-label">Titre</label>
         <input type="text" id="title" name="title" class="form-control" placeholder="exple: COURS ANALYSE 1 GID" required>
     </div>
     <div class="mb-3">
-        <label for="author" class="form-label">Auteur</label>
-        <input type="text" id="author" name="author" class="form-control" required>
-    </div>
-    <div class="mb-3">
         <label for="description" class="form-label">Description</label>
         <input type="text" id="description" name="description" class="form-control" placeholder="exple: Support de cours pour du premier semestre pour GID 1" required>
     </div>
     <div class="mb-3">
-        <label for="file" class="form-label">Fichier PDF</label>
-        <input type="file" id="file" name="file" class="form-control" accept=".pdf" required>
+        <label for="url" class="form-label">lien de la video</label>
+        <input type="text" id="url" name="url" class="form-control" required>
     </div>
     <button type="submit" class="btn btn-primary">Ajouter</button>
 </form>

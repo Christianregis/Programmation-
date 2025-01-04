@@ -71,6 +71,6 @@
             </div>
         </div>
     </footer>
-    <div class="text-center text-light bg-secondary fst-italic fw-bold">groupe3_idl2@bibliotheque2024</div>
+    <div class="text-center text-light bg-secondary fst-italic fw-bold">groupe3_idl2@bibliotheque2025</div>
 </body>
 </html>

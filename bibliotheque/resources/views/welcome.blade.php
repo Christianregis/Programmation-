@@ -5,35 +5,183 @@
         <link rel="stylesheet" href="{{ asset('assets/lib/bootstrap/css/bootstrap.css') }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
     </head>
-    <link rel="stylesheet" href="{{asset('assets/lib/bootstrap/css/welcome.css')}}">
+    <style>
+        /* Animation for pour */
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Zone de statistiques */
+        .stats-section {
+            background: #f8f9fa;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+        }
+        .stats-section h2 {
+            font-size: 2rem;
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+        .stats-section .stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+        .stats .stat {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #495057;
+        }
+
+        /* Section pour inciter à s'inscrire */
+        .cta-section {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            padding: 50px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .cta-section .btn {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+        }
+    </style>
 @include('layouts.app')
-<body>
-    <div class="flex-col bg-brown d-flex py-2">
-        <div class="flex-row align-items-center justify-content-center">
-            <div class="fs-5 text-center pb-3  d-flex text-brown px-3">PARCOUREZ LES INDEX</div>
-            <div class=" d-flex px-3 py-3 hover-div"><li class="px-2 py-2 fas fa-book-open text-primary"></li><a href="#" class="text-decoration-none fs-5">Collections de cours par filieres</a><i class="fas fa-arrow-right text-primary px-2 py-2 fs-5"></i></div>
-            <div class=" d-flex py-3 px-3 hover-div"><li class="px-2 py-2 fas fa-play text-primary"></li><a href="#" class="text-decoration-none fs-5">Collections de Videos par filiere </a><i class="fas fa-arrow-right text-primary px-2 py-2 fs-5"></i></div>
+<body class="bg-dark bg bg-opacity-10">
+    <!-- Hero Section -->
+    <section class="text-white text-center bg-dark py-5" style="background-image: url('path_to_your_image.jpg'); background-size: cover; background-position: center;">
+        <div class="container">
+            <h2 class="display-5 fw-bold">Accédez aux ressources académiques</h2>
+            <p class="lead mt-3">Consultez et téléchargez les cours et vidéos de l Université de Douala.</p>
+            <a href="{{route('connection')}}" class="btn btn-danger mt-4">Explorer les ressources</a>
         </div>
-        <div class="d-flex">
-            <img src="{{asset('assets/image/photo_udo.jfif')}}" alt="image_cooperation" class="rounded image_cooperation shadow stretch-animation">
+    </section>
+
+    <!--Zone de statistique-->
+    <section class="stats-section">
+        <div class="container">
+            <h2>Statistiques de la Bibliothèque</h2>
+            <div class="stats">
+                <div class="stat">
+                    <span id="students-count">{{$total_users}}</span> <br> Étudiants inscrits
+                </div>
+                <div class="stat">
+                    <span id="teachers-count">0</span> <br> Enseignants inscrits
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="flex-col d-flex bg-light">
-        <div class="px-4 py-5 flex-row">
-            <p class="text-reponsive">L a bibliotheque Numerique de l'Universite de Douala'est une platforme en ligne dediee a la mise a la disposition des ressources <br>academeique numeriques.Elle permets <br>etudiants de regarder et telecharger des cours  et au personnel academeiques d'acceder et de publier de cours facilement' <br>contribuant ainsi a l enerichissement et l apprentissage de la recherche au sein de <br>l Universite.
-            </p>
-            <div class="text-brown fs-4 d-flex">{{ $total_users }}<p class="fs-5 text-secondary py-1 px-2">Etudiants/Enseignants inscrits durant cette annee</p></div>
+    </section>
+
+    <!-- Section pour les Carrousel -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4">Galerie de l Université de Douala</h2>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <img src="{{asset('assets/image/fs_udo.jfif')}} " class="d-block" width="300" height="250" alt="Campus de l'Université de Douala">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="text-primary">Campus Principal</h5>
+                            <p class="text-dark">Découvrez le magnifique campus principal de l Université de Douala.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <img src="{{asset('assets/image/IMG_udo.jfif')}}" width="300" height="250" class="d-block" alt="Bibliothèque de l'université">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="text-primary">Bibliothèque Universitaire</h5>
+                            <p class="text-dark">Un espace dédié à l apprentissage et à la recherche.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <img src="{{asset('assets/image/photo_udo.jfif')}}" class="d-block img-fluid" width="300" height="250" alt="Auditorium de Douala">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="text-primary">Auditorium</h5>
+                            <p class="text-dark">Un espace pour les conférences et les séminaires.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Suivant</span>
+                </button>
+            </div>
         </div>
-        <div class="bg-brown1 flex-row px-5 rounded">
-            <div class="fs-5 text-light text-center py-2 border-bottom border-light">CONTACT</div>
-            <div class="fs-5 text-light pb-5 pt-3">Realisation des etudiants <br>du groupe 3 de IDL (Ingenierie <br>de Developpement <br> Logiciel) 2 de L universite de <br>douala</div>
-            <div class="align-items-center justify-content-center pt-5 pb-3 px-3"><button type="button" class=" rounded-1 shadow px-2 py-3 hover-button" onclick="window.location.href='{{route('connection')}}'">VOTRE ESPACE PERSONNEL</button></div>
+    </section>
+
+    <!-- Zone inscription -->
+    <section class="cta-section my-5 mx-auto">
+        <div class="container">
+            <h2 class="fw-bold">Rejoignez-nous dès aujourd'hui !</h2>
+            <p>Accédez à des milliers de cours et de vidéos pour enrichir vos connaissances. Inscrivez-vous et faites partie de notre communauté académique.</p>
+            <a href="{{route('inscription')}}" class="btn btn-light text-primary fw-bold">S'inscrire maintenant</a>
         </div>
-    </div>
-    <div class="flex-row bg-brown1 align-items-center justify-content-center mt-2 mb-5">
-        <div class="text-light text-center fs-4 py-2">A propos notre Cette Bibliotheque !</div>
-        <div class="text-light text-center px-2 py-2 fs-5">Cette bibliotheque se base sur <br>les cours et les videos par des enseignants et <br>des professionnel de l univeriste de Douala.<br> <br><button class="py-3 px-4 rounded-5 shadow hover-button" onclick="window.location.href='{{route('inscription')}}'">S'INSCRIRE'</button></div>
-    </div>
+    </section>
+    <!-- Cards Section -->
+    <main class="container my-5">
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="path_to_your_image.jpg" class="card-img-top" alt="Collections de cours">
+                    <div class="card-body">
+                        <h5 class="card-title">Collections de cours par filière</h5>
+                        <p class="card-text">Découvrez les cours organisés par filière académique.</p>
+                        <a href="{{route('connection')}}" class="btn btn-danger">Explorer →</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="path_to_your_image.jpg" class="card-img-top" alt="Collections de vidéos">
+                    <div class="card-body">
+                        <h5 class="card-title">Collections de vidéos</h5>
+                        <p class="card-text">Accédez aux vidéos académiques pour enrichir vos connaissances.</p>
+                        <a href="{{route('connection')}}" class="btn btn-danger">Explorer →</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="path_to_your_image.jpg" class="card-img-top" alt="Inscription">
+                    <div class="card-body">
+                        <h5 class="card-title">Inscrivez-vous</h5>
+                        <p class="card-text">Rejoignez notre communauté pour un accès complet aux ressources.</p>
+                        <a href="{{route('inscription')}}" class="btn btn-danger">S'inscrire →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     @include('layouts.footer')
     <script src="{{asset('assets/lib/bootstrap/js/bootstrap.js')}}">
     </script>

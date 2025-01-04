@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Video;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Book;
@@ -45,22 +46,24 @@ class UserController extends Controller
         // Récupérer l'utilisateur par son ID
         $user = User::findOrFail($id);
         $books=Book::all();
+        $videos=Video::all();
 
         // Retourner la vue avec les données de l'utilisateur
-        return view('user.show',compact('user','books'));
+        return view('user.show',compact('user','books','videos'));
 
     }
 
     public function filter_index_title(Request $request,$id){
         $search=$request->input('search');
         $user=User::findOrFail($id);
+        $videos=Video::all();
         if($search){
             $books=Book::where('title','LIKE','%'.$search.'%')->get();
         }
         else{
             $books=Book::all();
         }
-        return view('user.show', ['books'=>$books,'user'=>$user]);
+        return view('user.show', ['books'=>$books,'user'=>$user,'videos'=>$videos]);
     }
 
     public function show_connectionPage(){
@@ -78,6 +81,18 @@ class UserController extends Controller
         else{
             return back()->withErrors(['message'=> 'Email ou mot de passe invalide']);
         }
+    }
+
+    public function delete ($id){
+        $user=User::findOrFail( $id );
+        $user->delete();
+        $total_users=User::count();
+        return redirect()->route('home',compact('total_users'))->with('success','Votre Compte a ete supprime avec success !');
+    }
+
+    public function show_delete_form($id){
+        $user=User::findOrFail( $id );
+        return view('user.show_delete_form',compact('user'));
     }
 
     public function show_all($id){

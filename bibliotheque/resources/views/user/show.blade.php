@@ -31,7 +31,9 @@
                         <button type="button" class="btn btn-outline-success" onclick="window.location.href='{{route('user.show_all',$user->id)}}'">Information personnelle</button>
                         @if ($user->status=="Enseignant")
                             <button type="button" class="btn btn-outline-primary" onclick="window.location.href='{{route('books.create')}}'">Ajouter un Cours</button>
+                            <button type="button" class="btn btn-outline-danger" onclick="window.location.href='{{route('videos.create')}}'">Ajouter une video</button>
                         @endif
+                        <button type="button" class="btn btn-outline-danger" onclick="window.location.href='{{route('user.delete_form',$user->id)}}'">Supprimer son compte</button>
                     </div>
                    </div>
             </div>
@@ -61,7 +63,7 @@
             <div class="col">
                 <div class="card h-100 shadow">
                   <div class="card-body">
-                    <h5 class="card-title">{{$book->title}}</h5>
+                    <h5 class="card-title">Titre: {{$book->title}}</h5>
                     <p class="card-text flex-wrap">Auteur: {{$book->author}}</p>
                     <p class="card-text flex-wrap">Description: {{$book->description}}</p>
                   </div>
@@ -79,19 +81,20 @@
         <!-- Section des Vidéos -->
         <h4 class="mt-5 mb-3 text-primary">Vidéos Disponibles</h4>
         <div class="row row-cols-1 row-cols-md-3 g-4">
+          @foreach ($videos as $video)
           <div class="col">
             <div class="card h-100 shadow">
-              <img src="video1.jpg" class="card-img-top" alt="Titre de la Vidéo">
               <div class="card-body">
-                <h5 class="card-title">Titre de la Vidéo</h5>
-                <p class="card-text">Description de la vidéo.</p>
+                <h5 class="card-title">Titre: {{$video->title}}</h5>
+                <p class="card-text">Description: {{$video->description}}</p>
               </div>
               <div class="card-footer d-flex justify-content-between align-items-center">
-                <button class="btn btn-outline-primary">Regarder</button>
-                <button class="btn btn-outline-danger">Voir plus <li class="fas fa"></li></button>
+                <button class="btn btn-outline-primary" onclick="window.location.href='{{$video->url}}'">Regarder</button>
+                <button class="btn btn-outline-danger" onclick="window.location.href='{{route('videos.index')}}'">Voir plus <li class="fas fa-plus"></li></button>
               </div>
+          @endforeach
             </div>
-          </div>
+        </div>
           <!-- Répéter pour d autres vidéos -->
         </div>
       </div>

@@ -39,7 +39,7 @@
                   </li>
                   <li class="nav-item d-flex hover_li">
                     <i class="fas fa-phone py-3 px-2 text-primary"></i>
-                    <a class="nav-link active text-primary py-2 fs-5" href="#">Nous Contacter</a>
+                    <a class="nav-link active text-primary py-2 fs-5" href="mailto:christiancheukap@gmail.com">Nous Contacter</a>
                   </li>
                   <li class="nav-item d-flex hover_li">
                     <i class="fas fa-shield-alt py-3 px-2 text-primary"></i>
