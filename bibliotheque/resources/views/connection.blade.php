@@ -44,7 +44,7 @@
                 <input type="password" id="password" name="password" placeholder="Mot de passe" class="form-control" required>
             </div>
             <div class="d-flex align-items-center justify-content-center pb-2 form-group">
-                <a href="#" class="pe-4 text-decoration-none">Mot de passe oublie ?</a>
+                <a href="{{route('show_forgot_password')}}" class="pe-4 text-decoration-none">Mot de passe oublie ?</a>
                 <div class="d-flex align-items-center justify-content-center"><input type="checkbox"><label for="remember" class=" px-1">Se souvenir de moi</label></div>
             </div>
             <button type="submit" class="btn btn-primary w-100">Se Connecter</button>

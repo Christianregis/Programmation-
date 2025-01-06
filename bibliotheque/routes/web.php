@@ -64,3 +64,6 @@ Route::get('/videos', [VideoController::class,'index'])-> name('videos.index');
 // Route pour afficher de formulaire de confirmation de suppression et supprimer un utilisateur
 Route::get('/user/delete_account/{id}',[UserController::class,'show_delete_form'])->name('user.delete_form');
 Route::get('/user/delete/{id}',[UserController::class,'delete'])->name('user.delete');
+
+Route::get('/forgot/user',[UserController::class,'show_forgot'])->name('show_forgot_password');
+Route::get('/forgot',[UserController::class,'recovery_password'])->name('show_forgot');

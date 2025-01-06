@@ -35,7 +35,7 @@
                 <!-- Section 2: Connexion -->
                 <div class="d-flex flex-column px-3 mb-4">
                     <div class="mb-3">
-                        <img src="#" alt="Image UDO" class="image_univ_douala rounded border border-light">
+                        <img src="{{asset('assets/lib/assets/img/gid.png')}}" alt="Image UDO" class="image_univ_douala rounded border border-light">
                     </div>
                     <div class="mb-2 d-flex align-items-center">
                         <i class="fas fa-sign-out me-2"></i>

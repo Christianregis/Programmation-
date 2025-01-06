@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+<link rel="stylesheet" href="{{asset('assets/lib/bootstrap/css/bootstrap.css')}}">
+<link rel="stylesheet" href="{{asset('assets/lib/bootstrap/css/welcome.css')}}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="{{asset('assets/lib/bootstrap/js/bootstrap.js')}}"></script>
+<script src="{{asset('assets/lib/inscription.js')}}"></script>
 <div>
 <header>
     <link rel="stylesheet" href="{{asset('assets/lib/bootstrap/css/welcome.css')}}">

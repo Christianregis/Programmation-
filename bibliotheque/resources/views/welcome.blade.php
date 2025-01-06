@@ -97,11 +97,12 @@
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 </div>
                 <div class="carousel-inner">
                     <!-- Slide 1 -->
                     <div class="carousel-item active">
-                        <img src="{{asset('assets/image/fs_udo.jfif')}} " class="d-block" width="300" height="250" alt="Campus de l'Université de Douala">
+                        <img src="{{asset('assets/image/img ebook/citation-lecture-saint-augustin-1024x1024.png')}} " class="d-block rounded" width="300" height="250" alt="Campus de l'Université de Douala">
                         <div class="carousel-caption d-none d-md-block">
                             <h5 class="text-primary">Campus Principal</h5>
                             <p class="text-dark">Découvrez le magnifique campus principal de l Université de Douala.</p>
@@ -109,7 +110,7 @@
                     </div>
                     <!-- Slide 2 -->
                     <div class="carousel-item">
-                        <img src="{{asset('assets/image/IMG_udo.jfif')}}" width="300" height="250" class="d-block" alt="Bibliothèque de l'université">
+                        <img src="{{asset('assets/image/img ebook/citation-lecture-voyage-1.png')}}" width="300" height="250" class="d-block rounded" alt="Bibliothèque de l'université">
                         <div class="carousel-caption d-none d-md-block">
                             <h5 class="text-primary">Bibliothèque Universitaire</h5>
                             <p class="text-dark">Un espace dédié à l apprentissage et à la recherche.</p>
@@ -117,10 +118,18 @@
                     </div>
                     <!-- Slide 3 -->
                     <div class="carousel-item">
-                        <img src="{{asset('assets/image/photo_udo.jfif')}}" class="d-block img-fluid" width="300" height="250" alt="Auditorium de Douala">
+                        <img src="{{asset('assets/image/img ebook/citation-lecture-voyage-3.png')}}" class="d-block rounded" width="300" height="250" alt="Auditorium de Douala">
                         <div class="carousel-caption d-none d-md-block">
                             <h5 class="text-primary">Auditorium</h5>
                             <p class="text-dark">Un espace pour les conférences et les séminaires.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="carousel-item">
+                        <img src="{{asset('assets/image/img ebook/citadescartes.jpg')}}" class="d-block rounded" width="300" height="250" alt="Auditorium de Douala">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5 class="text-primary">Complexe de la professionalisation</h5>
+                            <p class="text-dark text-center">Un espace pour les dispensations de cours uniquement<br>pour les filieres professionnelles.</p>
                         </div>
                     </div>
                 </div>
@@ -150,7 +159,7 @@
             <!-- Card 1 -->
             <div class="col-md-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="path_to_your_image.jpg" class="card-img-top" alt="Collections de cours">
+                    <img src="{{asset('assets/image/img ebook/bv5.jpg')}}" class="card-img-top" style="object-fit: cover;" width="180" height="300" alt="Collections de cours">
                     <div class="card-body">
                         <h5 class="card-title">Collections de cours par filière</h5>
                         <p class="card-text">Découvrez les cours organisés par filière académique.</p>
@@ -161,7 +170,7 @@
             <!-- Card 2 -->
             <div class="col-md-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="path_to_your_image.jpg" class="card-img-top" alt="Collections de vidéos">
+                    <img src="{{asset('assets/image/img ebook/p3.jpg')}}" class="card-img-top" style="object-fit: cover;"  width="180" height="300" alt="Collections de vidéos">
                     <div class="card-body">
                         <h5 class="card-title">Collections de vidéos</h5>
                         <p class="card-text">Accédez aux vidéos académiques pour enrichir vos connaissances.</p>
@@ -172,7 +181,7 @@
             <!-- Card 3 -->
             <div class="col-md-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="path_to_your_image.jpg" class="card-img-top" alt="Inscription">
+                    <img src="{{asset('assets/image/img ebook/batiment-300x200.jpg')}}" class="card-img-top" style="object-fit: cover;"  width="200" height="300" alt="Inscription">
                     <div class="card-body">
                         <h5 class="card-title">Inscrivez-vous</h5>
                         <p class="card-text">Rejoignez notre communauté pour un accès complet aux ressources.</p>

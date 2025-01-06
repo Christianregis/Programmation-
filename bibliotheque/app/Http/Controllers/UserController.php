@@ -8,8 +8,10 @@ use App\Models\User;
 use App\Models\Book;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
+use function Laravel\Prompts\alert;
 class UserController extends Controller
 {
+    //Stockage des informations de l'utilisateur
     public function store(Request $request)
     {
         // Validation des données
@@ -52,7 +54,7 @@ class UserController extends Controller
         return view('user.show',compact('user','books','videos'));
 
     }
-
+    //Filtrage des livres par le titre
     public function filter_index_title(Request $request,$id){
         $search=$request->input('search');
         $user=User::findOrFail($id);
@@ -66,10 +68,12 @@ class UserController extends Controller
         return view('user.show', ['books'=>$books,'user'=>$user,'videos'=>$videos]);
     }
 
+        // Affichage de la page de connection
     public function show_connectionPage(){
         return view('connection');
     }
 
+    //Verifiaction des donnees lors de la connection
     public function login(Request $request){
         $email=$request->input('email');
         $password=$request->input('password');
@@ -83,6 +87,7 @@ class UserController extends Controller
         }
     }
 
+        //Suppression d'un utilisateur
     public function delete ($id){
         $user=User::findOrFail( $id );
         $user->delete();
@@ -90,13 +95,32 @@ class UserController extends Controller
         return redirect()->route('home',compact('total_users'))->with('success','Votre Compte a ete supprime avec success !');
     }
 
+        //Affichage de la page de confirmation de suppression
     public function show_delete_form($id){
         $user=User::findOrFail( $id );
         return view('user.show_delete_form',compact('user'));
     }
 
+    // Affichage des informations de l'utilisateur
     public function show_all($id){
         $user = User::findOrFail($id);
         return view('user.show_all',compact('user'));
+    }
+
+    public function show_forgot(){
+        return view('show_forgot_password');
+    }
+
+    public function recovery_password(Request $request){
+        $username=$request->input('username');
+        $full_name=$request->input('full_name');
+        $user=DB::table('users')->where('full_name',$full_name)->where('username', $username)->first();
+        if($user){
+            $password=$user->password;
+            return redirect()->back()->with('success',"Votre mote de passe est : $password");
+        }
+        else{
+            return redirect()->back()->with('error',"Aucune donnees trouvees !");
+        }
     }
 }
