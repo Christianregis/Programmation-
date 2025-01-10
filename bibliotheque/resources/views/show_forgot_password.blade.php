@@ -6,7 +6,7 @@
     <title>Page de Recuperation</title>
 </head>
 @include('layouts.app')
-<body class="bg-dark bg bg-opacity-10">
+<body>
     @csrf
     <ul>
         @foreach ( $errors->all() as $error)

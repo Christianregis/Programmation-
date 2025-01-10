@@ -11,9 +11,9 @@
     <script src="{{asset('assets/lib/inscription.js')}}"></script>
 </head>
 @include('layouts.app')
-<body class="bg-dark bg-opacity-10">
+<body>
     <div class="container">
-        <h1 class="text-center bg-primary">Liste des livres</h1>
+        <h1 class="text-center bg-primary text-light">Liste des livres</h1>
 
         @foreach($books as $book)
             <div class="card mb-3 shadow">

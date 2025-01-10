@@ -12,7 +12,7 @@
     <script src="{{asset('assets/lib/bootstrap/js/bootstrap.js')}}"></script>
     <script src="{{asset('assets/lib/inscription.js')}}"></script>
 </head>
-<body class="bg-dark bg-opacity-10 text-dark">
+<body>
     @include('layouts.app')
 
     <header class="bg-primary text-white text-center py-5">

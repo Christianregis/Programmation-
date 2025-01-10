@@ -11,7 +11,7 @@
     <script src="{{asset('assets/lib/inscription.js')}}"></script>
 </head>
 @include('layouts.app')
-<body class="bg-light bg bg-opacity-10">
+<body>
     @csrf
     <div class="container">
         <form action="{{route('user.delete',$user->id)}}" class="form-control shadow rounded p-4 w-100 align-items-center justify-content-center flex-col" onsubmit="return confirm('Etes vous sur de vouloir supprimer definitivement votre compte? Cette action est irreversible.')">

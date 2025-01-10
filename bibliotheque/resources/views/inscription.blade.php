@@ -28,7 +28,7 @@
     <form class="rounded p-4 w-100 custom-shadow border-bottom border-primary" style="max-width: 400px;" action="{{route('user.store')}}" method="POST">
         @csrf
         <div class="text-center mb-4">
-            <img src="{{asset('assets/image/fs_udo.jfif')}}" alt="image_udo" class="rounded-4 mx-auto d-block img-fluid" style="max-width: 200px; height: auto;">
+            <img src="{{ asset('assets/image/fs_udo.jfif') }}" alt="Université Douala" class="img-fluid mb-3 rounded-circle" style="max-width: 200px; height: auto;">
         </div>
         <div>
             <div class="d-flex justify-content-between mb-3">

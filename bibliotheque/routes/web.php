@@ -8,7 +8,6 @@ use App\Http\Controllers\VideoController;
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
-
 //Route vers la page d'inscription
 Route::get('/inscription', function () {
     return view('inscription');

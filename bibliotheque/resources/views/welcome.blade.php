@@ -91,7 +91,6 @@
     <!-- Section pour les Carrousel -->
     <section class="py-5">
         <div class="container">
-            <h2 class="text-center fw-bold mb-4">Galerie de l Université de Douala</h2>
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>

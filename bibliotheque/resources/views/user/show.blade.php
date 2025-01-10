@@ -63,7 +63,7 @@
             <div class="col">
                 <div class="card h-100 shadow">
                   <div class="card-body">
-                    <h5 class="card-title">Titre: {{$book->title}}</h5>
+                    <h5 class="card-title text-primary">Titre: {{$book->title}}</h5>
                     <p class="card-text flex-wrap">Auteur: {{$book->author}}</p>
                     <p class="card-text flex-wrap">Description: {{$book->description}}</p>
                   </div>

@@ -16,7 +16,7 @@
     <li class="alert alert-danger">{{$error}}</li>
     @endforeach
 </ul>
-<body class="bg-dark bg-opacity-10">
+<body>
 <h1 class="text-center">Ajout de Videos</h1>
 <form action="{{route('videos.store')}}" method="POST" enctype="multipart/form-data" class="form-control container">
     @csrf
