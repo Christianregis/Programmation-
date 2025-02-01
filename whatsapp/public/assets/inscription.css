@@ -1,0 +1,48 @@
+
+body {
+    background: #e9f7ef; /* Couleur inspirée de WhatsApp */
+    font-family: 'Arial', sans-serif;
+}
+.container {
+    margin-top: 50px;
+}
+.row {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.carousel img {
+    height: 100%;
+    object-fit: cover;
+}
+.card {
+    padding: 30px;
+}
+.card-header {
+    background-color: #25d366; /* Vert WhatsApp */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    text-align: center;
+}
+.form-control:focus {
+    border-color: #25d366;
+    box-shadow: 0 0 5px rgba(37, 211, 102, 0.5);
+}
+.btn-primary {
+    background-color: #25d366;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #1db954;
+}
+.card-footer {
+    background: #f1f1f1;
+}
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
