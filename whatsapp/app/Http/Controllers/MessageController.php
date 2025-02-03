@@ -21,12 +21,14 @@ class MessageController extends Controller
 
     public function store(Request $request){
         $validatedata=$request->validate([
-            'message'=>"required|string|max:1000",
+            'message'=>'required|string|max:5000',
+            'parent_id'=>'nullable|exists:messages,id',
         ]);
 
-        $message=Message::create([
+        Message::create([
             'user_id'=>Auth::id(),
             'message'=>$validatedata['message'],
+            'parent_id'=>$request->parent_id ?? null,
         ]);
 
         return redirect()->route('message.index')->with('success',"Message Envoye !");

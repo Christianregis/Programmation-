@@ -52,20 +52,25 @@
                 </div>
                 <div class="d-flex">
                     <p class="fs-5 text-success me-2">Votre Mot de passe:</p>
+                    @if ($user->id==auth()->id())
                     <p class="fs-5 text-primary">{{$user->password}}</p>
+                    @endif
                 </div>
-
+                @if ($user->id==auth()->id())
                 <div class="d-flex mb-2">
                     <button type="button" class="btn btn-danger text-light">Se Deconnecter <i class="fas fa-sign-in-alt"></i></button>
                 </div>
+                @endif
             </div>
             <div class="align-items-center d-flex justify-content-center">
                 <button type="button" class="btn btn-success text-light" onclick="window.location.href='{{route('user.select-chat')}}'"><i class="fas fa-comments"></i> Acceder au Chat</button>
             </div>
         </div>
         <div class="align-items-center d-flex justify-content-center mt-2 mb-2">
+            @if ($user->id==auth()->id())
             <button type="button" class="btn btn-primary text-light me-3">Modifier des informations <i class="fas fa-check"></i></button>
             <button type="button" class="btn btn-danger text-light" onclick="window.location.href='{{route('home')}}'">Revenir a l'accueil <i class="fas fa-arrow-right"></i></button>
+            @endif
         </div>
     </main>
     <script src="{{asset('assets/lib/assets/js/bootstrap.js')}}"></script>

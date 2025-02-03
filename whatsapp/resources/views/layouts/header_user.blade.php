@@ -103,6 +103,12 @@
                     <span>Groupe Ingénierie Securite Reseau (ISR)</span>
                 </li>
             </a>
+            <a href="{{route('propos')}}" class="text-decoration-none">
+                <li>
+                    <i class="fas fa-info-circle"></i>
+                    <span>A Propos</span>
+                </li>
+            </a>
             <a href="{{route('home')}}" class="text-decoration-none">
                 <li>
                     <i class="fas fa-home"></i>

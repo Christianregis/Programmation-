@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 })->name("home");
+Route::get('/propos',function(){
+    return view('propos');
+})->name('propos');
 
 Route::get('/inscription',[UserController::class,'show_register'])->name("user.inscription");
 

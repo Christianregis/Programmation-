@@ -104,7 +104,7 @@
                     <span>Chat</span>
                 </li>
             </a>
-            <a href="#" class="text-decoration-none">
+            <a href="{{route('propos')}}" class="text-decoration-none">
                 <li>
                     <i class="fas fa-info-circle"></i>
                     <span>À propos</span>

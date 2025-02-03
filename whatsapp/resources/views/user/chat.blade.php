@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Groupe WhatsApp</title>
-    <link rel="stylesheet" href="{{asset('assets/lib/bootstrap/css/bootstrap.css')}}">
-    <script src="{{asset('assets/lib/bootstrap/js/bootstrap.min.js')}}"></script>
-
+    <link rel="stylesheet" href="{{ asset('assets/lib/bootstrap/css/bootstrap.css') }}">
+    <script src="{{ asset('assets/lib/bootstrap/js/bootstrap.min.js') }}"></script>
     <style>
         /* Style général */
         body {
@@ -15,7 +14,8 @@
             display: flex;
             flex-direction: column;
         }
-        .zone_wtp{
+
+        .zone_wtp {
             background-color: #e5ddd5;
             height: 100vh;
             display: flex;
@@ -23,7 +23,6 @@
             margin-left: 80px;
         }
 
-        /* En-tête du chat */
         .chat-header {
             background-color: #25776d;
             color: white;
@@ -33,7 +32,6 @@
             font-weight: bold;
         }
 
-        /* Zone de messages */
         .chat-box {
             flex: 1;
             overflow-y: auto;
@@ -42,7 +40,6 @@
             flex-direction: column;
         }
 
-        /* Messages */
         .message {
             max-width: 75%;
             padding: 10px;
@@ -61,7 +58,6 @@
             text-align: right;
         }
 
-        /* Barre d'envoi */
         .chat-input {
             background-color: #f8f9fa;
             padding: 10px;
@@ -86,40 +82,74 @@
             border-radius: 20px;
             margin-left: 10px;
         }
-        .text-small{
-            font-size: 14px;
+
+        .reply {
+            background-color: #f1f0f0;
+            margin-left: 20px;
+            margin-top: 5px;
+            border-radius: 8px;
+            padding: 8px;
         }
-        .text-gris{
+
+        .reply .text-small {
+            font-size: 13px;
             color: gray;
         }
+        .text-sm{
+            font-size: 13px;
+        }
+
     </style>
 </head>
 @include('layouts.header_user')
 <body>
-    @csrf
-    <form action="{{route('message.store')}}" method="GET">
     <div class="zone_wtp">
-        <!-- En-tête du groupe -->
+        <!-- En-tête -->
         <div class="chat-header">
-            <span><i class="fab fa-whatsapp"></i> Groupe Discussion General</span>
-        </div>
-        <!-- Zone des messages -->
-        <div class="chat-box">
-                @foreach ($messages as $message)
-                    <div class="mb-2 p-2 rounded {{$message->user_id== auth()->id() ? 'message sent':'message received'}} d-flex flex-column">
-                        <a class="text-small text-primary border-bottom border-bottom-light mb-1 text-decoration-none me-1 ms-1" href="{{route('user.show',$message->user->id)}}">{{$message->user->username}}</a>
-                        <strong class="mb-3">{{$message->message}}</strong>
-                        <small class="text-gris text-small">{{$message->created_at}}</small>
-                    </div>
-                @endforeach
+            <span>Groupe Discussion General</span>
         </div>
 
-        <!-- Zone d'envoi -->
+        <!-- Zone des messages -->
+        <div class="chat-box">
+            @foreach ($messages as $message)
+                <!-- Message principal -->
+                <div class="mb-2 p-2 rounded {{ $message->user_id == auth()->id() ? 'message sent' : 'message received' }} d-flex flex-column">
+                    <span class="text-primary text-sm border-bottom border-dark mb-1"><a href="{{route('user.show',$message->user_id)}}" class="text-decoration-none"><strong>{{ $message->user->username }}</strong></a></span>
+                    <p>{{ $message->message }}</p>
+                    <small class="text-small text-gris">{{ $message->created_at->diffForHumans() }}</small>
+
+                    <!-- Réponses -->
+                    @if ($message->replies->count()>0)
+                        <div class="mt-2">
+                            @foreach ($message->replies as $reply)
+                                <div class="reply">
+                                    <span class="text-primary text-sm"><strong>{{ $reply->user->username }}</strong></span>
+                                    <p>{{ $reply->message }}</p>
+                                    <small class="text-small">{{ $reply->created_at->diffForHumans() }}</small>
+                                </div>
+                            @endforeach
+                        </div>
+                    @endif
+
+                    <!-- Formulaire de réponse -->
+                    <form method="GET" action="{{ route('message.store') }}" class="mt-2">
+                        @csrf
+                        <input type="hidden" name="parent_id" value="{{ $message->id }}">
+                        <input type="text" name="message" class="form-control" placeholder="Répondre..." required>
+                        <button type="submit" class="btn shadow btn-success mt-1">Répondre</button>
+                    </form>
+                </div>
+            @endforeach
+        </div>
+
+        <!-- Barre d'envoi -->
         <div class="chat-input">
-            <input type="text" id="message" name="message" class="form-control" placeholder="Écrire un message..." required>
-            <button class="btn btn-success" type="submit">Envoyer</button>
+            <form method="GET" action="{{ route('message.store') }}" class="d-flex w-100">
+                @csrf
+                <input type="text" name="message" id="message" class="form-control" placeholder="Écrire un message..." required>
+                <button type="submit" class="btn btn-success">Envoyer</button>
+            </form>
         </div>
     </div>
-</form>
 </body>
 </html>
