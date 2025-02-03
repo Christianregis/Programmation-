@@ -3,6 +3,7 @@
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\MessageIdlController;
 use App\Http\Controllers\MessageisrController;
+use App\Http\Controllers\MessageIdsController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,7 @@ Route::get('/select-chat', [MessageController::class,'show_select_chat'])->name(
 Route::get('/chat',[MessageController::class,'show_chat'])->name('user.chat');
 Route::get('/chat-idl',[MessageIdlController::class,'show_chat'])->name('useridl.chat');
 Route::get('/chat-isr',[MessageisrController::class,'show_chat'])->name('userisr.chat');
+Route::get('/chat-ids',[MessageIdsController::class,'show_chat'])->name('userids.chat');
 
 // Route pour le stockage et l'affichage des messages du groupe principal
 Route::middleware(['auth'])->group(function (){
@@ -44,6 +46,12 @@ Route::middleware(['auth'])->group(function (){
     Route::get('/message-isr',[MessageisrController::class,'store'])->name('messageisr.store');
 });
 Route::get('/messages-isr/create',[MessageisrController::class,'index'])->name('messageisr.index');
+
+// Route pour le stockage et l'affichage des messages du groupe IDS
+Route::middleware(['auth'])->group(function (){
+    Route::get('/message-ids',[MessageIdsController::class,'store'])->name('messageids.store');
+});
+Route::get('/messages-ids/create',[MessageIdsController::class,'index'])->name('messageids.index');
 
 // Route pour l'Authentification Auth
 Auth::routes();

@@ -94,7 +94,7 @@
         }
     </style>
 </head>
-@include('layouts.header')
+@include('layouts.header_user')
 <body>
     @csrf
     <form action="{{route('message.store')}}" method="GET">
@@ -103,7 +103,6 @@
         <div class="chat-header">
             <span><i class="fab fa-whatsapp"></i> Groupe Discussion General</span>
         </div>
-
         <!-- Zone des messages -->
         <div class="chat-box">
                 @foreach ($messages as $message)

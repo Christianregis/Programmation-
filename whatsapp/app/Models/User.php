@@ -59,4 +59,7 @@ class User extends Authenticatable
     public function messageirs(){
         return $this->hasMany(Messageirs::class);
     }
+    public function messageids(){
+        return $this->hasMany(MessageIds::class);
+    }
 }

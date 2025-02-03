@@ -94,7 +94,7 @@
         }
     </style>
 </head>
-@include('layouts.header')
+@include('layouts.header_user')
 <body>
     @csrf
     <form action="{{route('messageisr.store')}}" method="GET">

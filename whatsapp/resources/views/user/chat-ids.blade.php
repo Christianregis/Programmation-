@@ -97,11 +97,11 @@
 @include('layouts.header_user')
 <body>
     @csrf
-    <form action="{{route('messageidl.store')}}" method="GET">
+    <form action="{{route('messageids.store')}}" method="GET">
     <div class="zone_wtp">
         <!-- En-tête du groupe -->
         <div class="chat-header">
-            <span><i class="fab fa-whatsapp"></i> Groupe Discussion IDL</span>
+            <span><i class="fab fa-whatsapp"></i> Groupe Discussion IDS</span>
         </div>
         <!-- Zone des messages -->
         <div class="chat-box">

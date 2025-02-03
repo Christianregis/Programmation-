@@ -55,6 +55,17 @@
                     </div>
                 </div>
             </div>
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow bg-success">
+                    <img src="{{asset('assets/image/img ebook/batiment-300x200.jpg')}}" class="card-img-top" style="object-fit: cover;"  width="200" height="300" alt="Inscription">
+                    <div class="card-body">
+                        <h5 class="card-title text-light fw-bold text-center border-bottom border-light pb-1">Groupe de discussion IDS</h5>
+                        <p class="card-text text-light">Discutez avec des etudiants evoluant dans le domaine de l'intelligence artificielle et du big Data.</p>
+                        <button type="button" class="btn btn-primary" onclick="window.location.href='{{route('messageids.index')}}'"><i class="fas fa-comments"></i> Acceder au chat</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 </body>
