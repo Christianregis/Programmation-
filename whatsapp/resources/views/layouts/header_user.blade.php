@@ -11,7 +11,6 @@
         body {
             margin: 0;
             padding: 0;
-            display: flex;
             background: #e9f7ef; /* Color inspired by WhatsApp */
             font-family: 'Arial', sans-serif;
         }

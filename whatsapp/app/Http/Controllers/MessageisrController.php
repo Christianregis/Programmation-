@@ -27,4 +27,9 @@ class MessageisrController extends Controller
 
         return redirect()->route('messageisr.index')->with('success',"Message Envoye !");
     }
+
+    public function show_message_reply($id){
+        $message=Messageirs::findOrFail($id);
+        return view('user.chat_reply',compact('message'));
+    }
 }

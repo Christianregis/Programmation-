@@ -13,7 +13,6 @@
         body {
             margin: 0;
             padding: 0;
-            display: flex;
             background: #e9f7ef; /* Couleur inspirée de WhatsApp */
             font-family: 'Arial', sans-serif;
         }
@@ -24,7 +23,7 @@
             width: 80px;
             transition: width 0.3s ease-in-out;
             position: fixed;
-            z-index: 10;
+            z-index:10;
         }
 
         .sidebar.expanded {
@@ -71,13 +70,6 @@
 
         .sidebar.expanded ul li span {
             display: inline-block;
-        }
-
-        main {
-            margin-left: 80px;
-            padding: 20px;
-            transition: margin-left 0.3s ease-in-out;
-            width: 100%;
         }
 
         .sidebar.expanded + main {

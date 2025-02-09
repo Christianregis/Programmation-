@@ -15,6 +15,13 @@
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         cursor: pointer;;
     }
+    .chat-input {
+            padding: 10px;
+            align-items: center;
+            border-top: 1px solid rgb(205, 223, 180);
+            cursor: default;
+        }
+
 </style>
 @include('layouts.header')
 <body>
@@ -68,5 +75,8 @@
             </div>
         </div>
     </main>
+    <div class="chat-input">
+        <div class="text-success text-center fw-bold">Copyright <i class="fab fa-whatsapp"></i> Idl2-Gestion de blog</div>
+    </div>
 </body>
 </html>

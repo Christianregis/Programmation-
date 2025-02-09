@@ -116,28 +116,8 @@
                 <div class="mb-2 p-2 rounded {{ $message->user_id == auth()->id() ? 'message sent' : 'message received' }} d-flex flex-column">
                     <span class="text-primary text-sm border-bottom border-dark mb-1"><a href="{{route('user.show',$message->user_id)}}" class="text-decoration-none"><strong>{{ $message->user->username }}</strong></a></span>
                     <p>{{ $message->message }}</p>
-                    <small class="text-small text-gris">{{ $message->created_at->diffForHumans() }}</small>
-
-                    <!-- Réponses -->
-                    @if ($message->replies->count()>0)
-                        <div class="mt-2">
-                            @foreach ($message->replies as $reply)
-                                <div class="reply">
-                                    <span class="text-primary text-sm"><strong>{{ $reply->user->username }}</strong></span>
-                                    <p>{{ $reply->message }}</p>
-                                    <small class="text-small">{{ $reply->created_at->diffForHumans() }}</small>
-                                </div>
-                            @endforeach
-                        </div>
-                    @endif
-
-                    <!-- Formulaire de réponse -->
-                    <form method="GET" action="{{ route('message.store') }}" class="mt-2">
-                        @csrf
-                        <input type="hidden" name="parent_id" value="{{ $message->id }}">
-                        <input type="text" name="message" class="form-control" placeholder="Répondre..." required>
-                        <button type="submit" class="btn shadow btn-success mt-1">Répondre</button>
-                    </form>
+                    <small class="text-small text-gris border-bottom border-primary rounded pb-1">{{ $message->created_at->diffForHumans() }}</small>
+                    <a href="{{route('message.reply',$message->id)}}" class="text-center text-primary text-decoration-none">Commenter <i class="fas fa-arrow-right"></i></a>
                 </div>
             @endforeach
         </div>

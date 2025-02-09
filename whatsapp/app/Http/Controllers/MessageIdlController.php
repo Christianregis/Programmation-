@@ -21,11 +21,16 @@ class MessageIdlController extends Controller
             'message'=>"required|string|max:1000",
         ]);
 
-        $message=MessageIdl::create([
+        MessageIdl::create([
             'user_id'=>Auth::id(),
             'message'=>$validatedata['message'],
         ]);
 
         return redirect()->route('messageidl.index')->with('success',"Message Envoye !");
+    }
+
+    public function show_message_reply($id){
+        $message=MessageIdl::findOrFail($id);
+        return view('user.chat_reply',compact('message'));
     }
 }

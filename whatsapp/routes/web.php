@@ -60,3 +60,9 @@ Route::get('/messages-ids/create',[MessageIdsController::class,'index'])->name('
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Route pour l'affichage des commentaires au messages
+Route::get('/reply/{id}',[MessageController::class,'show_message_reply'])->name('message.reply');
+Route::get('/reply-idl/{id}',[MessageIdlController::class,'show_message_reply'])->name('messageidl.reply');
+Route::get('/reply-ids/{id}',[MessageIdsController::class,'show_message_reply'])->name('messageids.reply');
+Route::get('/reply-isr/{id}',[MessageisrController::class,'show_message_reply'])->name('messageisr.reply');

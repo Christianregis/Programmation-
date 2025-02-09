@@ -50,7 +50,7 @@ class UserController extends Controller
             return redirect()->route('user.show',$user->id)->with('success',"Connection reussi !");
         }
         else{
-            return back()->with('error',"Identififiants ou mot de passe invalide !");
+            return back()->with('error',"Identifiants ou mot de passe invalide !");
         }
     }
 

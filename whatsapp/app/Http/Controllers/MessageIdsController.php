@@ -28,4 +28,9 @@ class MessageIdsController extends Controller
 
         return redirect()->route('messageids.store')->with('success',"Message Envoye !");
     }
+
+    public function show_message_reply($id){
+        $message=MessageIds::findOrFail($id);
+        return view('user.chat_reply',compact('message'));
+    }
 }

@@ -1,118 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="{{asset('\assets\lib\assets\css/bootstrap.min.css')}}" rel="stylesheet">
-
+    <link rel="stylesheet" href="{{asset('assets/lib/bootstrap/css/bootstrap.css')}}">
+    <style>
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            margin-left: 80px;
+        }
+        .form-container {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+        }
+        .form-header {
+            font-size: 22px;
+            font-weight: bold;
+            color: #25D366;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-control:focus {
+            border-color: #25D366;
+            box-shadow: 0 0 5px rgba(37, 211, 102, 0.5);
+        }
+        .btn-success {
+            background-color: #25D366;
+            border: none;
+        }
+        .btn-success:hover {
+            background-color: #1da653;
+        }
+        .form-footer {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .form-footer a {
+            color: #25D366;
+            text-decoration: none;
+        }
+        .form-footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-@include('layouts.header')
 <body>
-
-<main class="p-4" style="margin-left: 80px;">
-    <div class="text-center text-success fw-bold fs-4 mb-5"><i class="fab fa-whatsapp text-success"></i> Blog-Gid-25</div>
-    <div class="container">
+    @include('layouts.header')
+<main>
+<div class="form-container">
+    <div class="form-header">Créer un compte</div>
+    <form method="GET" action="{{route('user.store')}}">
+                <!--Zone de rapport d'erreur-->
         <ul>
             @foreach ( $errors->all() as $error)
             <li class="alert alert-danger rounded shadow">{{$error}}</li>
             @endforeach
         </ul>
-        <div class="row">
-            <!-- Section Carrousel -->
-            <div class="col-md-6 p-0">
-                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="https://via.placeholder.com/600x600" class="d-block w-100" alt="Image 1">
-                            <div class="carousel-caption">
-                                <h5>Bienvenue !</h5>
-                                <p>Connectez-vous avec vos amis facilement.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="#" class="d-block w-100" alt="Image 2">
-                            <div class="carousel-caption">
-                                <h5>Partagez vos moments</h5>
-                                <p>Rejoignez une communauté dynamique.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <img src="#" class="d-block w-100" alt="Image 3">
-                            <div class="carousel-caption">
-                                <h5>Sécurité garantie</h5>
-                                <p>Vos données sont toujours protégées.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Précédent</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Suivant</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Section Formulaire -->
-            <div class="col-md-6">
-                <div class="card"  style="border:none;">
-                    <div class="card-header d-flex justify-content-between mb-3" style="background-color: #25d366;border-top-left-radius: 10px;border-top-right-radius: 10px;text-align: center;">
-                        <a href="{{route('user.inscription')}}" class="btn bg-primary px-4 shadow text-light"><i class="fas fa-user-plus"></i> Creer un compte</a>
-                        <a href="{{route('user.connection')}}" class="btn px-4 text-light"><i class="fas fa-sign-in-alt"></i> Se Connecter</a>
-                    </div>
-                    <div class="card-body">
-                        <form action="{{route('user.store')}}" method="GET">
-                            <!-- Nom complet -->
-                            <div class="mb-4">
-                                <label for="full_name" class="form-label text-success"><i class="fa-solid fa-user"></i> Nom complet</label>
-                                <input type="text" class="form-control" id="full_name" name="full_name" placeholder="Entrez votre nom complet" required>
-                            </div>
-
-                            <!-- Nom d'utilisateur -->
-                            <div class="mb-4">
-                                <label for="username" class="form-label text-success"><i class="fa-solid fa-user-tag"></i> Nom d'utilisateur</label>
-                                <input type="text" class="form-control" id="username" name="username" placeholder="Choisissez un nom d'utilisateur" required>
-                            </div>
-
-                            <!-- Email -->
-                            <div class="mb-4">
-                                <label for="email" class="form-label text-success"><i class="fa-solid fa-envelope"></i> Adresse email</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Entrez votre adresse email" required>
-                            </div>
-
-                            <!-- Mot de passe -->
-                            <div class="mb-4">
-                                <label for="password" class="form-label text-success"><i class="fa-solid fa-lock"></i> Mot de passe</label>
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Choisissez un mot de passe" required>
-                            </div>
-
-                            <!-- Confirmation du mot de passe -->
-                            <div class="mb-4">
-                                <label for="password_confirmation" class="form-label text-success"><i class="fa-solid fa-lock"></i> Confirmez le mot de passe</label>
-                                <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirmez votre mot de passe" required>
-                            </div>
-
-                            @if (session('success'))
-                            <div class="form-group mb-3">
-                                <label class="form-label alert alert-success">{{session('success')}}</label>
-                            </div>
-                            @endif
-                            <!-- Bouton d'inscription -->
-                            <button type="submit" class="btn btn-primary w-100"><i class="fa-solid fa-user-check"></i> S'inscrire</button>
-                        </form>
-                    </div>
-                    <div class="card-footer text-center">
-                        <small>Vous avez déjà un compte ? <a href="{{route('user.connection')}}" class="text-success">Connectez-vous ici</a></small>
-                    </div>
-                </div>
-            </div>
+        <!-- Nom complet -->
+        <div class="input-group mb-3">
+            <span class="input-group-text bg-light text-muted">
+                <i class="fas fa-user"></i>
+            </span>
+            <input type="text" class="form-control" placeholder="Votre nom complet" required name="full_name">
         </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text bg-light text-muted">
+                <i class="fas fa-user-plus"></i>
+            </span>
+            <input type="text" class="form-control" placeholder="Votre nom d'utilisateur" required name="username">
+        </div>
+        <!-- Adresse email -->
+        <div class="input-group mb-3">
+            <span class="input-group-text bg-light text-muted">
+                <i class="fas fa-envelope"></i>
+            </span>
+            <input type="email" class="form-control" placeholder="Votre adresse email" required name="email">
+        </div>
+
+        <!-- Mot de passe -->
+        <div class="input-group mb-3">
+            <span class="input-group-text bg-light text-muted">
+                <i class="fas fa-lock"></i>
+            </span>
+            <input type="password" class="form-control" placeholder="Mot de passe" required name="password">
+        </div>
+
+        <!-- Répéter le mot de passe -->
+        <div class="input-group mb-3">
+            <span class="input-group-text bg-light text-muted">
+                <i class="fas fa-key"></i>
+            </span>
+            <input type="password" class="form-control" placeholder="Répéter le mot de passe" required>
+        </div>
+
+        <!-- Checkbox -->
+        <div class="form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="termsCheck" required>
+            <label class="form-check-label" for="termsCheck">
+                J'accepte les <a href="#">termes et conditions</a>.
+            </label>
+        </div>
+        <ul>
+            @foreach ( $errors->all() as $error)
+            <li class="alert alert-danger rounded shadow">{{$error}}</li>
+            @endforeach
+        </ul>
+        <!-- Bouton d'inscription -->
+        <button type="submit" class="btn btn-success w-100">S'inscrire</button>
+    </form>
+
+    <!-- Lien vers la connexion -->
+    <div class="form-footer">
+        Vous avez déjà un compte ? <a href="{{route('user.connection')}}">Connectez-vous ici</a>
     </div>
+</div>
 </main>
-    <script src="{{asset('assets/lib/assets/js/bootstrap.bundle.min.js')}}"></script>
+<div class="chat-input mb-2">
+    <div class="text-success text-center fw-bold">Copyright <i class="fab fa-whatsapp"></i> Idl2-Gestion de blog</div>
+</div>
 </body>
 </html>
