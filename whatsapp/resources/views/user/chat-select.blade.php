@@ -5,24 +5,8 @@
     <title>Selection de chat</title>
     <link rel="stylesheet" href="{{asset('assets/lib/bootstrap/css/bootstrap.css')}}">
     <script src="{{asset('assets/lib/bootstrap/js/bootstrap.min.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('assets/css/chat-select.css')}}">
 </head>
-<style>
-    .card {
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        cursor: pointer;;
-    }
-    .chat-input {
-            padding: 10px;
-            align-items: center;
-            border-top: 1px solid rgb(205, 223, 180);
-            cursor: default;
-        }
-
-</style>
 @include('layouts.header')
 <body>
     <main class="p-4" style="margin-left: 80px;">
