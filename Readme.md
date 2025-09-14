@@ -33,4 +33,12 @@ Il s’agit d’un projet professionnel qui démontre comment concevoir des site
 
 ---
 
-## 📂 Structure du projet
+---
+
+## 🔧 Installation et utilisation
+
+1. **Cloner le dépôt**
+   ```bash
+   git clone https://github.com/Christianregis/Programmation-.git
+2. **Accéder au projet**
+cd Programmation-
